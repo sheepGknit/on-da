@@ -234,6 +234,15 @@
       height: 100%;
       margin: 0;
     }
+	
+    /* 추가된 부분: 카드 내부에 24px 여백을 주고 버튼을 맨 아래로 정렬합니다. */
+    .hero-top-grid .card {
+      padding: 24px;
+    }
+
+    .hero-top-grid .card > .btn {
+      margin-top: auto;
+    }
 
     /* 뉴스레터 영역 */
     .newsletter {
@@ -1765,7 +1774,7 @@
       body.innerHTML = `
         <div class="resource-count-line" style="margin:0 0 12px">총 ${items.length}건</div>
         ${itemsHtml}
-        <div class="resource-admin-note">관리자는 <b>resources/resources.csv</b>에 한 줄을 추가하고 지정 폴더에 파일을 넣으면 자료를 등록할 수 있습니다.</div>
+        <div class="resource-admin-note">찾고자 하는 자료가 없는 경우 [의견·제안]을 통해 알려주세요.</div>
       `;
     }
 
