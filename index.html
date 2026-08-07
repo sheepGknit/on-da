@@ -154,6 +154,14 @@ body{background:var(--surface-2);color:var(--ink)}
       <div class="content-box">
         <h3>📚 지침 및 매뉴얼</h3>
         <!-- 자료 3개(법령, 지침, 서식)가 들어가는 3열 그리드 -->
+=======
+      <div class="content-box">
+        <h3>📢 공지사항 및 주요내용</h3>
+        <div id="noticeList"></div>
+      </div>
+      <div class="content-box">
+        <h3>📚 지침 및 매뉴얼</h3>
+>>>>>>> 9a8bf22b78df00fec0aa156f929724a69497be5c
         <div class="resource-grid" id="resourceList"></div>
         <button class="btn secondary resource-all" type="button" onclick="openResourceModal()">자료 전체보기</button>
       </div>
@@ -414,7 +422,10 @@ body{background:var(--surface-2);color:var(--ink)}
     if(num)return `https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=${num}`;
     if(item&&item.url&&item.url.startsWith('http')&&!item.url.includes('notice_list.jsp'))return item.url;
     return 'https://www.kywa.or.kr/pressinfo/notice_list.jsp';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9a8bf22b78df00fec0aa156f929724a69497be5c
   }
   function renderNoticeList(b){
     const source=(noticesByCategory[b.id]||[]).slice(0,2);
@@ -486,7 +497,10 @@ body{background:var(--surface-2);color:var(--ink)}
     if(item.content){
       if(item.contentHtml){body.innerHTML=item.contentHtml;}else{body.textContent=item.content;}
       return;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9a8bf22b78df00fec0aa156f929724a69497be5c
     }
     try{
       const res=await fetch(`/api/notices/${encodeURIComponent(item.id)}`);
