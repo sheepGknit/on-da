@@ -1706,47 +1706,47 @@
     // 4. 모달(팝업창) 관련 로직
     // =========================================
     function openResourceModal(filter = 'all') {
-      const b = businesses.find(x => x.id === activeBusinessId) || businesses[0];
-      activeResourceFilter = filter;
-      const modal = document.getElementById('resourceModal');
+		const b = businesses.find(x => x.id === activeBusinessId) || businesses[0];
+		activeResourceFilter = filter;
+		const modal = document.getElementById('resourceModal');
       
-      document.getElementById('resourceModalTitle').textContent = `${b.label} · ${b.name} 자료센터`;
-      document.getElementById('resourceModalDescription').textContent = '법령, 지침 및 매뉴얼, 관련 서식을 검색하고 미리보거나 다운로드할 수 있습니다.';
-      document.getElementById('resourceSearch').value = '';
-      document.getElementById('resourceAudience').value = 'all';
-      document.getElementById('resourceSort').value = 'latest';
+		document.getElementById('resourceModalTitle').textContent = `${b.label} · ${b.name} 자료센터`;
+		document.getElementById('resourceModalDescription').textContent = '법령, 지침 및 매뉴얼, 관련 서식을 검색하고 미리보거나 다운로드할 수 있습니다.';
+		document.getElementById('resourceSearch').value = '';
+		document.getElementById('resourceAudience').value = 'all';
+		document.getElementById('resourceSort').value = 'latest';
       
-      renderResourceModal(filter);
-      modal.classList.add('show');
+		renderResourceModal(filter);
+		modal.classList.add('show');
     }
 
     function renderResourceModal(filter = activeResourceFilter) {
-      activeResourceFilter = filter;
-      const b = businesses.find(x => x.id === activeBusinessId) || businesses[0];
+		activeResourceFilter = filter;
+		const b = businesses.find(x => x.id === activeBusinessId) || businesses[0];
       
-      document.querySelectorAll('.resource-tab').forEach(x => x.classList.toggle('active', x.dataset.filter === filter));
+		document.querySelectorAll('.resource-tab').forEach(x => x.classList.toggle('active', x.dataset.filter === filter));
       
-      const q = (document.getElementById('resourceSearch')?.value || '').trim().toLowerCase();
-      const audience = document.getElementById('resourceAudience')?.value || 'all';
-      const sort = document.getElementById('resourceSort')?.value || 'latest';
+		const q = (document.getElementById('resourceSearch')?.value || '').trim().toLowerCase();
+		const audience = document.getElementById('resourceAudience')?.value || 'all';
+		const sort = document.getElementById('resourceSort')?.value || 'latest';
       
-      let items = resourcesFor(b.id, filter).filter(r => {
+		let items = resourcesFor(b.id, filter).filter(r => {
         const text = [r.title, r.description, ...(r.keywords || [])].join(' ').toLowerCase();
         const aud = Array.isArray(r.audience) ? r.audience : [r.audience];
         return (!q || text.includes(q)) && (audience === 'all' || aud.includes(audience) || aud.includes('공통'));
       });
       
-      items.sort((a, z) => {
-        if (sort === 'title') return a.title.localeCompare(z.title, 'ko');
-        if (sort === 'type') return String(a.fileType).localeCompare(String(z.fileType));
-        return String(z.registeredAt || '').localeCompare(String(a.registeredAt || ''));
-      });
-      
-      const body = document.getElementById('resourceModalBody');
-      if (!items.length) {
-        body.innerHTML = '<div class="resource-empty">조건에 맞는 자료가 없습니다.</div>';
-        return;
-      }
+		items.sort((a, z) => {
+			if (sort === 'title') return a.title.localeCompare(z.title, 'ko');
+			if (sort === 'type') return String(a.fileType).localeCompare(String(z.fileType));
+			return String(z.registeredAt || '').localeCompare(String(a.registeredAt || ''));
+		});
+		  
+		const body = document.getElementById('resourceModalBody');
+		if (!items.length) {
+			body.innerHTML = '<div class="resource-empty">조건에 맞는 자료가 없습니다.</div>';
+			return;
+		}
       
       const itemsHtml = items.map(r => `
         <article class="resource-row">
@@ -1849,34 +1849,37 @@
       }
     });
 
-    // =========================================
-    // 6. 데이터 로딩 (data.json Fetch)
-    // =========================================
-    async function loadData() {
-      const state = document.getElementById('syncState');
-      try {
-        state.textContent = '데이터 불러오는 중…';
-        
-        // data.json 파일을 비동기적으로 가져옵니다.
-        const res = await fetch('data.json');
-        if (!res.ok) throw new Error('data.json 파일을 불러오지 못했습니다.');
-        
-        const data = await res.json();
-        businesses = data.businesses || [];
-        resourceItems = data.resources || [];
-        noticesByCategory = data.notices || {};
-        
-        state.textContent = '데이터 연동 완료';
-      } catch (e) {
-        console.error('데이터 로드 오류:', e);
-        state.textContent = '데이터를 불러오지 못했습니다.';
-      } finally {
-        if (businesses.length > 0) {
-          renderTabsHTML();
-          renderBusiness('volunteer', false);
-        }
-      }
-    }
+	// =========================================
+	// 6. 데이터 연동 (data.json Load)
+	// =========================================
+	async function loadData() {
+		const state = document.getElementById('syncState');
+		try {
+			state.textContent = '데이터 불러오는 중…';
+		  
+			// 파이썬 크롤러가 생성/업데이트한 data.json을 불러옵니다.
+			const res = await fetch('data.json');
+			if (!res.ok) throw new Error('data.json 파일을 불러오지 못했습니다.');
+		  
+			const data = await res.json();
+		  
+			// JSON 데이터 전역 변수에 할당
+			businesses = data.businesses || [];
+			resourceItems = data.resources || [];
+			noticesByCategory = data.notices || {};
+		  
+			state.textContent = '데이터 연동 완료';
+		} catch (e) {
+		  console.error('데이터 로드 오류:', e);
+		  state.textContent = '데이터를 불러오지 못했습니다.';
+		} finally {
+			// 데이터 로딩이 끝나면 화면을 그립니다.
+			if (businesses.length > 0) {
+				renderTabsHTML();
+				renderBusiness('volunteer', false);
+			}
+		}
+	}
 
     // 스크립트 실행
     loadData();
