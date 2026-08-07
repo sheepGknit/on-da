@@ -1,552 +1,1876 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>대국민 청소년활동 정책 온다(ON-DA)</title>
-<style>
-:root{--blue:#F97316;--navy:#17233C;--line:#E5E7EB;--soft:#FFF4E8;--text:#14213d;--muted:#68748a;--card:#fff;--shadow:0 12px 30px rgba(23,35,60,.10)}
-*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:132px} body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:linear-gradient(#fff,#F7F8FA);color:var(--text)} a{text-decoration:none;color:inherit}.wrap{max-width:1480px;margin:auto;padding:0 28px}.top{background:#fff;border-bottom:1px solid #e8edf6;position:sticky;top:0;z-index:20}.topline{height:72px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px}.brand small{display:block;font-weight:800;font-size:16px}.brand b{font-size:31px;color:var(--blue)}.brand span{font-size:27px;font-weight:900}.utils{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}.hamb{font-size:28px}.nav{height:52px;display:flex;justify-content:space-around;align-items:center;font-weight:800}.nav a{position:relative;padding:16px 8px}.nav a:after{content:"";position:absolute;left:50%;right:50%;bottom:7px;height:3px;border-radius:99px;background:var(--blue);transition:.2s}.nav a:hover:after,.nav a:focus:after{left:8px;right:8px}.hero{padding:30px 0 18px}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>대국민 청소년활동 정책 온다(ON-DA)</title>
+  <style>
+    /* =========================================
+       1. CSS 변수 (디자인 토큰) 및 초기화
+       ========================================= */
+    :root {
+      /* 기존 색상 */
+      --blue: #F97316;
+      --navy: #17233C;
+      --line: #E5E7EB;
+      --soft: #FFF4E8;
+      --text: #14213d;
+      --muted: #68748a;
+      --card: #fff;
+      --shadow: 0 12px 30px rgba(23, 35, 60, .10);
+      
+      /* ON-DA Version 3.0 색상 */
+      --primary: #163A6B;
+      --primary-2: #24568f;
+      --accent: #FF8C42;
+      --accent-soft: #FFF2E9;
+      --surface: #FFFFFF;
+      --surface-2: #F7F9FC;
+      --border: #E3E9F1;
+      --ink: #152238;
+      --sub: #65748A;
+      --shadow-v2: 0 10px 30px rgba(22, 58, 107, .07);
+    }
 
-/* 뉴스레터, 청소년활동 찾기, 내 주변 시설 찾기 (2 : 1 : 1 비율 배치) */
-.hero-top-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;align-items:stretch}
-.hero-top-grid > div, .hero-top-grid > article{display:flex;flex-direction:column}
-.hero-top-grid .panel,.hero-top-grid .card{height:100%;margin:0}
+    * {
+      box-sizing: border-box;
+    }
 
-.section-title,.feature-title{font-size:24px;font-weight:900;line-height:1.25;margin:0 0 14px;display:flex;align-items:center;gap:10px;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;color:var(--text)}.section-title:before,.feature-title:before{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#FFF4E8;color:#C2410C;font-size:17px;flex:0 0 30px}.section-title:before{content:'▣'}.panel{background:#fff;border:1px solid #cdd8ec;border-radius:16px;box-shadow:var(--shadow)}.newsletter{padding:22px;display:flex;flex-direction:column}.newsletter-card{flex:1}.newsletter-head{display:flex;justify-content:space-between;color:#F97316;font-weight:900;font-size:18px}.newsletter-card{margin-top:18px;display:grid;grid-template-columns:1.1fr .9fr;border:1px solid #e0e6f1;border-radius:14px;overflow:hidden}.newsletter-copy{padding:30px}.newsletter-copy small{color:#64728a}.newsletter-copy h3{font-size:24px;margin:10px 0}.newsletter-copy p{line-height:1.7;color:#4c596f}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:10px;background:var(--blue);color:white;font-weight:800;border:0;cursor:pointer}.btn.secondary{background:#fff;color:var(--blue);border:1px solid #FDBA74}.promo{background:linear-gradient(135deg,#17233C,#243B64);border-radius:16px;color:white;padding:18px 22px;height:100%;display:flex;flex-direction:column;justify-content:center}.promo h2{margin:0 0 10px;font-size:23px}.promo-item{display:grid;grid-template-columns:58px 58px 1fr 24px;align-items:center;gap:14px;padding:10px 0;border-top:1px solid rgba(255,255,255,.18)}.promo-item:first-of-type{border-top:0}.num{font-size:27px;font-weight:900}.ico{width:50px;height:42px;border-radius:13px;background:rgba(255,255,255,.14);display:grid;place-items:center;font-size:28px}.promo-item b{font-size:18px}.promo-item small{display:block;margin-top:5px;opacity:.9}.service-strip{margin-top:18px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px 24px}.strip-head{display:flex;justify-content:space-between;align-items:center}.strip-head .feature-title{margin:0}.strip-grid{display:grid;grid-template-columns:repeat(8,1fr);margin-top:14px}.service{padding:14px 10px;text-align:center;border:0;border-left:1px solid #e5eaf3;background:#fff;cursor:pointer;font:inherit;color:inherit}.service:first-child{border-left:0}.service .emoji{font-size:34px}.service b{display:block;margin-top:8px}.service.active{background:#FFF4E8;color:#C2410C;border-radius:13px;box-shadow:inset 0 0 0 2px #FDBA74}.business-panel{margin-top:18px;background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:24px}.business-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.business-head h2{margin:0;font-size:25px}.business-head p{margin:7px 0 0;color:var(--muted)}.business-body{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:22px}.content-box{border:1px solid #dde5f2;border-radius:15px;padding:20px;background:#FFFFFF}.content-box h3{margin:0 0 14px;font-size:19px}.notice-item{padding:14px 0;border-top:1px solid #e8edf5}.notice-item:first-child{border-top:0}.notice-item b{display:block;margin-bottom:5px}.notice-item small{color:#6d7890}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 132px;
+    }
 
-/* 지침 및 매뉴얼: 법령, 지침, 서식 3개 나란히 배치 */
-.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.resource{padding:16px;border:1px solid #dfe7f5;border-radius:13px;background:white}.resource strong{display:block;margin-bottom:5px}.resource small{color:#748096}.business-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.internal-calendar{margin-top:18px;background:linear-gradient(135deg,#17233C,#243B64);color:white;border-radius:18px;padding:24px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;box-shadow:var(--shadow)}.internal-calendar h2{margin:0 0 8px;font-size:23px}.internal-calendar p{margin:0;opacity:.88;line-height:1.6}.lock{font-size:48px}.internal-actions{display:flex;gap:10px;align-items:center}.internal-actions .btn.secondary{background:rgba(255,255,255,.12);color:white;border-color:rgba(255,255,255,.35)}.bottom-tools{display:grid;grid-template-columns:1fr 1fr 2fr;gap:24px;margin-top:28px}.bottom-tools > div{display:flex;flex-direction:column}.bottom-tools .card{height:100%;margin:0;display:flex;flex-direction:column}.bottom-tools .card .btn{margin-top:auto}.card{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:20px}.card h3{margin:0 0 16px}.map{height:115px;border-radius:12px;background:linear-gradient(135deg,#EAF7F2,#FFF4E8);position:relative;overflow:hidden}.map:before,.map:after{content:'';position:absolute;border-radius:50%;width:20px;height:20px;background:#F97316;box-shadow:50px 25px 0 #16A34A,-40px 35px 0 #FACC15;top:35px;left:50%}.mini-search{display:flex;margin-top:12px}.mini-search input{flex:1;padding:12px;border:1px solid #d8e0ee;border-radius:9px 0 0 9px}.mini-search button{border:0;background:var(--blue);color:#fff;width:48px;border-radius:0 9px 9px 0}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.chip{background:#F7F8FA;border-radius:20px;padding:7px 10px;font-size:12px}.row{display:flex;gap:12px;align-items:flex-start}.tagicon{width:34px;height:34px;border-radius:9px;background:#EAF7F2;display:grid;place-items:center}.chat-ill,.idea-ill{height:120px;border-radius:12px;background:linear-gradient(135deg,#EAF7F2,#D7F2E8);display:grid;place-items:center;font-size:52px}.activity-ill{height:150px;border-radius:14px;background:linear-gradient(135deg,#EAF7F2,#FFF4E8);display:grid;place-items:center;font-size:64px;margin-bottom:14px}.activity-link-card p{color:var(--muted);line-height:1.65}.facility-links{display:grid;gap:9px}.facility-link{display:grid;grid-template-columns:34px 1fr 20px;align-items:center;gap:10px;padding:11px 12px;border:1px solid #dde6f4;border-radius:11px;background:#FFFFFF;transition:.2s}.facility-link:hover{transform:translateY(-1px);border-color:#FDBA74;background:#FFF7ED}.facility-link span{font-size:20px}.facility-link b{font-size:14px}.facility-link em{font-style:normal;color:var(--blue);font-weight:900}.footer{padding:28px 0 40px;color:#738099;font-size:13px}.modal{position:fixed;inset:0;background:rgba(23,35,60,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.modal.show{display:flex}.modal-card{width:min(520px,100%);background:white;border-radius:20px;padding:26px;box-shadow:0 24px 70px rgba(0,0,0,.25)}.modal-card h2{margin:0 0 10px}.modal-card p{color:var(--muted);line-height:1.65}.field{display:grid;gap:7px;margin-top:14px}.field input{height:46px;border:1px solid #d5deed;border-radius:10px;padding:0 13px;font-size:15px}.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}
+    body {
+      margin: 0;
+      font-family: Pretendard, "Noto Sans KR", Arial, sans-serif;
+      background: var(--surface-2);
+      color: var(--ink);
+    }
 
-.keyword-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.keyword-chip{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#FFF4E8;color:#C2410C;font-size:12px;font-weight:800}.notice-title-btn{display:block;width:100%;padding:0;border:0;background:none;text-align:left;font:inherit;font-weight:900;color:var(--text);cursor:pointer;line-height:1.5}.notice-title-btn:hover,.notice-title-btn:focus{color:var(--blue);text-decoration:underline;text-underline-offset:3px}.notice-loading,.notice-empty{padding:28px 10px;text-align:center;color:var(--muted)}.notice-link{display:block;padding:15px 0;border-top:1px solid #e8edf5}.notice-link:first-child{border-top:0}.notice-link:hover b{color:var(--blue)}.notice-empty-slot{background:#f8fafc;border-radius:10px;padding:15px;margin-top:8px}.notice-empty-slot b{color:#7b879c;font-weight:700}.notice-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:7px;color:#6d7890;font-size:12px}.notice-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.notice-tag{font-size:11px;font-weight:800;color:#F97316;background:#EAF7F2;border-radius:999px;padding:4px 8px}.notice-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.text-btn{border:0;background:none;padding:0;color:var(--blue);font-weight:800;cursor:pointer}.sync-state{font-size:12px;color:var(--muted);margin-left:auto}.detail-modal .modal-card{width:min(760px,100%);max-height:86vh;overflow:auto}.detail-body{line-height:1.75;color:#3e4a62;white-space:pre-wrap}.detail-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:10px 0 18px}.service .label2{font-size:18px;font-weight:900}.service small{display:block;margin-top:5px;color:#79859a;font-size:11px}.service.active small{color:#9A3412}
-.title-policy:before{content:'▦'}.title-activity:before{content:'⌕'}.title-facility:before{content:'⌂'}.title-chat:before{content:'✦'}.title-idea:before{content:'✎'}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.proposal-modal .modal-card{width:min(660px,100%);max-height:92vh;overflow:auto}.proposal-form{display:grid;gap:14px}.proposal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.proposal-form label{font-weight:800;font-size:14px;color:var(--navy)}.proposal-form input,.proposal-form select,.proposal-form textarea{width:100%;border:1px solid #d5deed;border-radius:11px;padding:12px 13px;font:inherit;background:#fff}.proposal-form textarea{min-height:160px;resize:vertical}.proposal-recipient{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:#FFF4E8;color:#9A3412;font-weight:800}.proposal-status{display:none;padding:14px 16px;border-radius:12px;font-weight:800;line-height:1.55}.proposal-status.show{display:block}.proposal-status.success{background:#ECFDF5;color:#166534}.proposal-status.error{background:#FEF2F2;color:#991B1B}.privacy-box{font-size:13px;color:var(--muted);line-height:1.55;background:#F8FAFC;border-radius:10px;padding:12px}.privacy-check{display:flex;gap:8px;align-items:flex-start;font-size:14px}.privacy-check input{width:auto;margin-top:3px}.submit-spinner{display:none}.is-loading .submit-label{display:none}.is-loading .submit-spinner{display:inline}.demo-note{font-size:12px;color:var(--muted);margin-top:8px}@media(max-width:760px){.resource-center-tools{grid-template-columns:1fr}.resource-row{grid-template-columns:42px minmax(0,1fr)}.resource-actions{grid-column:1/-1;justify-content:stretch}.resource-action{flex:1}.proposal-grid{grid-template-columns:1fr}}
+    /* =========================================
+       2. 공통 레이아웃 및 상단 네비게이션
+       ========================================= */
+    .wrap {
+      max-width: 1480px;
+      margin: auto;
+      padding: 0 28px;
+    }
 
-/* ON-DA v3 자료센터 */
-.resource-center-tools{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:10px;margin-top:18px}.resource-search{height:46px;border:1px solid var(--border);border-radius:12px;padding:0 14px;font:inherit;background:#fff}.resource-select{height:46px;border:1px solid var(--border);border-radius:12px;padding:0 36px 0 13px;font:inherit;background:#fff}.resource-row{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid var(--border);border-radius:16px;background:#fff}.resource-row+.resource-row{margin-top:10px}.resource-file-icon{width:48px;height:48px;border-radius:14px;background:#EEF4FA;display:grid;place-items:center;font-weight:900;color:var(--primary)}.resource-main b{font-size:16px;line-height:1.45}.resource-meta{display:flex;flex-wrap:wrap;gap:7px 12px;margin-top:7px;color:var(--muted);font-size:13px}.resource-keywords{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}.resource-keywords span{padding:5px 8px;border-radius:999px;background:#F3F6FA;color:#41516A;font-size:12px}.resource-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.resource-action{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 12px;border:1px solid #C8D5E4;border-radius:10px;background:#fff;color:var(--primary);font-weight:800;font-size:13px}.resource-action.download{background:var(--primary);color:#fff;border-color:var(--primary)}.new-badge{display:inline-flex;margin-left:7px;padding:3px 6px;border-radius:999px;background:#FFF0E5;color:#D95B0B;font-size:10px;font-weight:900;vertical-align:middle}.resource-empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:14px}.resource-admin-note{margin-top:16px;padding:13px 15px;border-radius:12px;background:#FFF8ED;color:#76501F;font-size:13px;line-height:1.6}.resource-count-line{font-size:13px;color:var(--muted);margin-top:8px}.resource-modal .modal-card{width:min(980px,100%)}
+    .top {
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 2px 16px rgba(22, 58, 107, .06);
+    }
 
-@media(max-width:1100px){.strip-grid{grid-template-columns:repeat(4,1fr)}.bottom-tools{grid-template-columns:1fr !important}.business-body{grid-template-columns:1fr}}
-@media(max-width:900px){.resource-grid{grid-template-columns:1fr}}
-@media(max-width:760px){.resource-center-tools{grid-template-columns:1fr}.resource-row{grid-template-columns:42px minmax(0,1fr)}.resource-actions{grid-column:1/-1;justify-content:stretch}.resource-action{flex:1}.wrap{padding:0 16px}.topline{height:auto;padding:16px 0;grid-template-columns:1fr auto}.nav{display:none}.brand b{font-size:25px}.brand span{font-size:22px}.hero-top-grid{grid-template-columns:1fr}.newsletter-card{grid-template-columns:1fr}.promo-item{grid-template-columns:48px 52px 1fr 18px}.strip-grid{grid-template-columns:repeat(2,1fr)}.business-head{display:block}.bottom-tools{grid-template-columns:1fr}.internal-calendar{grid-template-columns:1fr}.internal-actions{flex-wrap:wrap}.section-title{font-size:21px}}
+    .topline {
+      height: 72px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 28px;
+    }
 
-/* ON-DA Version 3.0 */
-:root{--primary:#163A6B;--primary-2:#24568f;--accent:#FF8C42;--accent-soft:#FFF2E9;--surface:#FFFFFF;--surface-2:#F7F9FC;--border:#E3E9F1;--ink:#152238;--sub:#65748A;--shadow-v2:0 10px 30px rgba(22,58,107,.07)}
-body{background:var(--surface-2);color:var(--ink)}
-.top{box-shadow:0 2px 16px rgba(22,58,107,.06)} .brand b{color:var(--accent)} .nav a:after{background:var(--accent)}
-.hero{padding-top:36px}.panel,.service-strip,.business-panel,.card{border:1px solid var(--border);box-shadow:var(--shadow-v2)}
-.panel,.promo,.service-strip,.business-panel,.card,.internal-calendar{border-radius:20px}
-.section-title,.feature-title{font-size:25px;letter-spacing:-.5px}.section-title:before,.feature-title:before{background:var(--accent-soft);color:#D96117}
-.promo,.internal-calendar{background:linear-gradient(135deg,var(--primary),#224E82)}
-.btn{background:var(--primary);border-radius:12px;transition:.2s}.btn:hover{transform:translateY(-1px);background:var(--primary-2)}.btn.secondary{color:var(--primary);border-color:#C9D6E6;background:#fff}
-.service-strip{padding:24px 28px}.service{padding:18px 10px}.service.active{background:#EEF4FA;color:var(--primary);box-shadow:inset 0 0 0 2px #AFC6DF}
-.business-panel{padding:30px}.business-head{padding-bottom:22px;border-bottom:1px solid var(--border)}.business-head h2{font-size:29px;letter-spacing:-.7px}.business-body{gap:22px;margin-top:24px}.content-box{border-color:var(--border);border-radius:18px;padding:24px}.content-box h3{font-size:20px}
-.resource{position:relative;min-height:154px;padding:20px;border-color:var(--border);border-radius:16px;background:linear-gradient(180deg,#fff,#FAFBFD);transition:.2s}.resource:hover{transform:translateY(-3px);box-shadow:var(--shadow-v2);border-color:#B8C9DC}.resource-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#EEF4FA;font-size:21px;margin-bottom:18px}.resource strong{font-size:17px;color:var(--primary)}.resource small{display:block;margin-top:7px;line-height:1.55}.resource-count{position:absolute;top:18px;right:18px;font-size:12px;color:var(--sub);background:#F0F3F7;padding:5px 8px;border-radius:999px}.resource-all{width:100%;margin-top:16px}
-.business-stats{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.business-stat{display:inline-flex;align-items:center;gap:7px;background:#F2F5F9;border:1px solid var(--border);padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800;color:var(--primary)}
-.notice-link{padding:17px 0}.notice-title-btn{font-size:15px}.notice-tag{background:#EEF4FA;color:var(--primary)}
-.resource-modal .modal-card{width:min(900px,100%);max-height:88vh;overflow:auto;padding:0}.resource-modal-head{position:sticky;top:0;background:#fff;z-index:2;padding:26px 28px 18px;border-bottom:1px solid var(--border)}.resource-modal-head h2{margin:0}.resource-modal-head p{margin:7px 0 0}.resource-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.resource-tab{border:1px solid var(--border);background:#fff;color:var(--sub);padding:9px 13px;border-radius:999px;font-weight:800;cursor:pointer}.resource-tab.active{background:var(--primary);border-color:var(--primary);color:#fff}.resource-modal-body{padding:24px 28px 28px}.resource-section{margin-top:25px}.resource-section:first-child{margin-top:0}.resource-section h3{display:flex;align-items:center;gap:10px;margin:0 0 12px;color:var(--primary)}.resource-list-all{display:grid;gap:10px}.resource-row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:13px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#fff}.resource-row-icon{width:42px;height:42px;border-radius:12px;background:#EEF4FA;display:grid;place-items:center}.resource-row b{display:block}.resource-row small{display:block;color:var(--sub);margin-top:4px}.resource-row button{border:0;background:#F3F6FA;color:var(--primary);font-weight:800;padding:9px 12px;border-radius:10px;cursor:pointer}.resource-empty{color:var(--sub);padding:22px;text-align:center;background:#F8FAFC;border-radius:14px}
-</style>
-<script src="data.js"></script>
-</head>
-<body>
-<header class="top">
-  <div class="wrap topline">
-    <a class="brand" href="#"><small>대국민 청소년활동 정책</small><b>온다</b><span>(ON-DA)</span></a>
-    <div class="utils"><span class="hamb">☰</span></div>
-  </div>
-  <nav class="wrap nav"><a href="#business">정책사업</a>
-    <a href="#finder-section">청소년활동·시설 찾기</a>
-    <a href="#chatbot">챗봇상담</a>
-    <a href="#suggestion">참여·제안</a>
-    <a href="#calendar">시도센터 사업일정</a>
-  </nav>
-</header>
-<main>
-<section class="hero wrap">
-  
-  <!-- 뉴스레터 / 청소년활동 찾기 / 내 주변 시설 찾기 (2 : 1 : 1 비율 배치) -->
-  <div class="hero-top-grid" id="finder-section">
-    <!-- 뉴스레터 영역 (너비 2) -->
-    <div class="panel newsletter">
-      <div class="newsletter-head"><span>최신 뉴스레터</span>
-        <a href="https://www.neusral.com/public_briefings/lLedoIH-z7c0j7dBzRKpHA==" target="_blank" rel="noopener">더보기 ›</a>
-      </div>
-      <div class="newsletter-card">
-        <div class="newsletter-copy">
-          <small>KYWA 뉴스레터</small>
-          <h3>청소년의 오늘을 읽고, 더 나은 내일을 잇다</h3>
-          <p>청소년정책과 활동 현장, 안전 정보, 사회 이슈와 변화까지—청소년을 둘러싼 다양한 소식과 관점을 전합니다.</p>
-          <a class="btn" href="https://www.neusral.com/public_briefings/lLedoIH-z7c0j7dBzRKpHA==" target="_blank" rel="noopener">뉴스레터 자세히 보기 ›</a>
-        </div>
-        <div class="newsletter-art"><img src="./img/news.png" alt="청소년정책, 안전, 사회 이슈를 담은 뉴스레터 일러스트"></div>
-      </div>
-    </div>
+    .brand small {
+      display: block;
+      font-weight: 800;
+      font-size: 16px;
+    }
 
-    <!-- 청소년활동 찾기 영역 (너비 1) -->
-    <article class="card activity-link-card" id="activity-finder">
-      <h3 class="feature-title title-activity">청소년활동 찾기</h3>
-      <div class="activity-ill">🔎</div>
-      <p>e청소년 활동정보서비스에서 지역·연령·분야별 청소년활동을 찾아보세요.</p>
-      <a class="btn" href="https://www.youth.go.kr/youth/eYouth/main/main.yt?curMenuSn=334" target="_blank" rel="noopener">e청소년에서 활동 찾기 ›</a>
-    </article>
+    .brand b {
+      font-size: 31px;
+      color: var(--accent);
+    }
 
-    <!-- 내 주변 시설 찾기 영역 (너비 1) -->
-    <article class="card facility-card" id="facility-finder">
-      <h3 class="feature-title title-facility">내 주변 시설 찾기</h3>
-      <div class="facility-links">
-        <a class="facility-link" href="https://www.youth.go.kr/youth/act/actInstt/actInsttListForm.yt?curMenuSn=477" target="_blank" rel="noopener">
-          <span>📍</span>
-          <b>우리 동네 활동기관 찾기</b>
-          <em>↗</em>
-        </a>
-        <a class="facility-link" href="https://www.youth.go.kr/youth/act/activityOrg/activityFacilitiesStatusListForm.yt?curMenuSn=2074" target="_blank" rel="noopener">
-          <span>🛡️</span>
-          <b>인증수련활동 기관 찾기</b>
-          <em>↗</em>
-        </a>
-        <a class="facility-link" href="https://www.youth.go.kr/youth/wdr/intro/intrlInsttSearchLst2.yt?curMenuSn=1594" target="_blank" rel="noopener">
-          <span>🏅</span>
-          <b>성취포상활동 기관 찾기</b>
-          <em>↗</em>
-        </a>
-        <a class="facility-link" href="https://www.youth.go.kr/youth/dvl/ey/fcltyGrp/vlntwkActFcltyGrpLstForm2.yt?curMenuSn=1591" target="_blank" rel="noopener">
-          <span>💗</span>
-          <b>자원봉사활동 기관 찾기</b>
-          <em>↗</em>
-        </a>
-        <a class="facility-link" href="https://www.youth.go.kr/youth/youth/contents/promteCnterIntroForm.yt?curMenuSn=1637" target="_blank" rel="noopener">
-          <span>🏢</span>
-          <b>시·도 청소년활동진흥센터 찾기</b>
-          <em>↗</em>
-        </a>
-      </div>
-    </article>
-  </div>
+    .brand span {
+      font-size: 27px;
+      font-weight: 900;
+    }
 
-  <section class="service-strip" id="business">
-    <div class="strip-head">
-      <h3 class="feature-title title-policy">정책사업 한눈에 보기</h3>
-      <div style="display:flex;align-items:center;gap:14px">
-        <span class="sync-state" id="syncState">KYWA 공지사항 연동 준비 중</span>
-        <a href="https://www.kywa.or.kr/pressinfo/notice_list.jsp" target="_blank" rel="noopener">전체 공지보기 ›</a>
-      </div>
-    </div>
-    <div class="strip-grid" id="businessTabs"></div>
-  </section>
+    .utils {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-  <section class="business-panel" aria-live="polite">
-    <div class="business-head">
-      <div>
-        <h2 id="businessTitle">봉사</h2>
-        <p id="businessSummary">청소년의 자발적인 사회참여와 지역사회 기여를 지원하는 사업입니다.</p>
-        <div class="business-stats">
-          <span class="business-stat" id="noticeStat">📢 공지 2건</span>
-          <span class="business-stat" id="resourceStat">📚 자료 0건</span>
-        </div>
-        <div class="keyword-row" id="keywordRow"></div>
-      </div>
-      <div class="business-links">
-        <a id="introLink" class="btn" target="_blank" rel="noopener">사업 소개 보기 ›</a>
-      </div>
-    </div>
-    <div class="business-body">
-      <div class="content-box"><h3>📢 공지사항 및 주요내용</h3><div id="noticeList"></div></div>
-      <div class="content-box">
-        <h3>📚 지침 및 매뉴얼</h3>
-        <!-- 자료 3개(법령, 지침, 서식)가 들어가는 3열 그리드 -->
-        <div class="resource-grid" id="resourceList"></div>
-        <button class="btn secondary resource-all" type="button" onclick="openResourceModal()">자료 전체보기</button>
-      </div>
-    </div>
-  </section>
+    .hamb {
+      font-size: 28px;
+    }
 
-  <!-- 하단 도구 영역: AI 챗봇 / 의견제안 / 홍보 (1 : 1 : 2 비율 배치) -->
-  <section class="bottom-tools" id="bottom-tools">
-    <article class="card" id="chatbot">
-      <h3 class="feature-title title-chat">AI 챗봇 상담</h3>
-      <div class="chat-ill">🤖</div>
-      <p>정책, 사업, 지침, 법령 등 궁금한 내용을 청소년정책 AI 비서에게 물어보세요.</p>
-      <a class="btn" href="https://chatgpt.com/g/g-6a72cf43d5c081918e6746f0e1d1aeca-ceongsonyeonjeongcaeg-ai-biseo" target="_blank" rel="noopener noreferrer">청소년정책 AI 비서 열기</a>
-      <small style="display:block;margin-top:10px;color:var(--muted);line-height:1.5">※ ChatGPT 로그인 후 이용할 수 있습니다.</small>
-    </article>
+    .nav {
+      height: 52px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-weight: 800;
+    }
+
+    .nav a {
+      position: relative;
+      padding: 16px 8px;
+    }
+
+    .nav a:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom: 7px;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--accent);
+      transition: .2s;
+    }
+
+    .nav a:hover:after,
+    .nav a:focus:after {
+      left: 8px;
+      right: 8px;
+    }
+
+    /* =========================================
+       3. 메인 콘텐츠 및 공통 컴포넌트 (버튼, 카드)
+       ========================================= */
+    .hero {
+      padding: 36px 0 18px;
+    }
+
+    /* 공통 패널 스타일 */
+    .panel,
+    .service-strip,
+    .business-panel,
+    .card,
+    .internal-calendar {
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-v2);
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      background: var(--primary-2);
+    }
+
+    .btn.secondary {
+      color: var(--primary);
+      border: 1px solid #C9D6E6;
+      background: #fff;
+    }
+
+    .section-title,
+    .feature-title {
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1.25;
+      margin: 0 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -.5px;
+    }
+
+    .section-title:before,
+    .feature-title:before {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: var(--accent-soft);
+      color: #D96117;
+      font-size: 17px;
+      flex: 0 0 30px;
+    }
+
+    .title-policy:before { content: '▦'; }
+    .title-activity:before { content: '⌕'; }
+    .title-facility:before { content: '⌂'; }
+    .title-chat:before { content: '✦'; }
+    .title-idea:before { content: '✎'; }
+
+    /* =========================================
+       4. 상단 그리드 (뉴스레터, 활동찾기, 시설찾기)
+       ========================================= */
+    .hero-top-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-top-grid > div,
+    .hero-top-grid > article {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-top-grid .panel,
+    .hero-top-grid .card {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* 뉴스레터 영역 */
+    .newsletter {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .newsletter-head {
+      display: flex;
+      justify-content: space-between;
+      color: #F97316;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .newsletter-card {
+      flex: 1;
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      border: 1px solid #e0e6f1;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .newsletter-copy {
+      padding: 30px;
+    }
+
+    .newsletter-copy small {
+      color: #64728a;
+    }
+
+    .newsletter-copy h3 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .newsletter-copy p {
+      line-height: 1.7;
+      color: #4c596f;
+    }
+
+    /* 활동 및 시설 찾기 영역 */
+    .activity-ill {
+      height: 150px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #EAF7F2, #FFF4E8);
+      display: grid;
+      place-items: center;
+      font-size: 64px;
+      margin-bottom: 14px;
+    }
+
+    .activity-link-card p {
+      color: var(--sub);
+      line-height: 1.65;
+    }
+
+    .facility-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .facility-link {
+      display: grid;
+      grid-template-columns: 34px 1fr 20px;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 12px;
+      border: 1px solid #dde6f4;
+      border-radius: 11px;
+      background: #FFFFFF;
+      transition: .2s;
+    }
+
+    .facility-link:hover {
+      transform: translateY(-1px);
+      border-color: #FDBA74;
+      background: #FFF7ED;
+    }
+
+    .facility-link span {
+      font-size: 20px;
+    }
+
+    .facility-link b {
+      font-size: 14px;
+    }
+
+    .facility-link em {
+      font-style: normal;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    /* =========================================
+       5. 정책사업 탭 및 패널 영역
+       ========================================= */
+    .service-strip {
+      margin-top: 18px;
+      padding: 24px 28px;
+    }
+
+    .strip-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .strip-head .feature-title {
+      margin: 0;
+    }
+
+    .strip-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      margin-top: 14px;
+    }
+
+    .service {
+      padding: 18px 10px;
+      text-align: center;
+      border: 0;
+      border-left: 1px solid #e5eaf3;
+      background: #fff;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+    }
+
+    .service:first-child {
+      border-left: 0;
+    }
+
+    .service .emoji {
+      font-size: 34px;
+    }
+
+    .service b {
+      display: block;
+      margin-top: 8px;
+    }
+
+    .service .label2 {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .service small {
+      display: block;
+      margin-top: 5px;
+      color: #79859a;
+      font-size: 11px;
+    }
+
+    .service.active {
+      background: #EEF4FA;
+      color: var(--primary);
+      border-radius: 13px;
+      box-shadow: inset 0 0 0 2px #AFC6DF;
+    }
     
-    <article class="card" id="suggestion">
-      <h3 class="feature-title title-idea">의견을 들려주세요</h3>
-      <div class="idea-ill">💡</div>
-      <p>불편한 점이나 새로운 아이디어를 제안해 주세요.</p>
-      <button class="btn" type="button" onclick="openProposalModal()">제안하기</button>
-    </article>
+    .service.active small {
+      color: #9A3412;
+    }
+
+    /* 비즈니스(사업) 패널 상세 */
+    .business-panel {
+      margin-top: 18px;
+      padding: 30px;
+    }
+
+    .business-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .business-head h2 {
+      margin: 0;
+      font-size: 29px;
+      letter-spacing: -.7px;
+    }
+
+    .business-head p {
+      margin: 7px 0 0;
+      color: var(--sub);
+    }
+    
+    .business-stats {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    
+    .business-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #F2F5F9;
+      border: 1px solid var(--border);
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .keyword-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .keyword-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #FFF4E8;
+      color: #C2410C;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .business-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .business-body {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .content-box {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      background: #FFFFFF;
+    }
+
+    .content-box h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+
+    /* =========================================
+       6. 공지사항 리스트 아이템
+       ========================================= */
+    .notice-title-btn {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: none;
+      text-align: left;
+      font: inherit;
+      font-weight: 900;
+      font-size: 15px;
+      color: var(--ink);
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    .notice-title-btn:hover,
+    .notice-title-btn:focus {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .notice-link {
+      display: block;
+      padding: 17px 0;
+      border-top: 1px solid #e8edf5;
+    }
+
+    .notice-link:first-child {
+      border-top: 0;
+    }
+
+    .notice-link:hover b {
+      color: var(--primary);
+    }
+
+    .notice-empty-slot {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 8px;
+    }
+
+    .notice-empty-slot b {
+      color: #7b879c;
+      font-weight: 700;
+    }
+
+    .notice-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 7px;
+      color: #6d7890;
+      font-size: 12px;
+    }
+
+    .notice-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .notice-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      background: #EEF4FA;
+      border-radius: 999px;
+      padding: 4px 8px;
+    }
+
+    .notice-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .text-btn {
+      border: 0;
+      background: none;
+      padding: 0;
+      color: var(--primary);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .sync-state {
+      font-size: 12px;
+      color: var(--sub);
+      margin-left: auto;
+    }
+
+    /* =========================================
+       7. 자료(지침/매뉴얼/서식) 그리드
+       ========================================= */
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .resource {
+      position: relative;
+      min-height: 154px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff, #FAFBFD);
+      transition: .2s;
+    }
+
+    .resource:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-v2);
+      border-color: #B8C9DC;
+    }
+
+    .resource-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: #EEF4FA;
+      font-size: 21px;
+      margin-bottom: 18px;
+    }
+
+    .resource strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 17px;
+      color: var(--primary);
+    }
+
+    .resource small {
+      display: block;
+      margin-top: 7px;
+      color: #748096;
+      line-height: 1.55;
+    }
+    
+    .resource-count {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 12px;
+      color: var(--sub);
+      background: #F0F3F7;
+      padding: 5px 8px;
+      border-radius: 999px;
+    }
+
+    .resource-all {
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    /* =========================================
+       8. 하단 도구 영역 (챗봇, 의견제안, 캘린더)
+       ========================================= */
+    .bottom-tools {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .bottom-tools > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bottom-tools .card {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .bottom-tools .card .btn {
+      margin-top: auto;
+    }
+
+    .card h3 {
+      margin: 0 0 16px;
+    }
+
+    .chat-ill,
+    .idea-ill {
+      height: 120px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #EAF7F2, #D7F2E8);
+      display: grid;
+      place-items: center;
+      font-size: 52px;
+    }
+
+    .promo {
+      background: linear-gradient(135deg, var(--primary), #224E82);
+      border-radius: 20px;
+      color: white;
+      padding: 18px 22px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promo h2 {
+      margin: 0 0 10px;
+      font-size: 23px;
+    }
+
+    .promo-item {
+      display: grid;
+      grid-template-columns: 58px 58px 1fr 24px;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 0;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .promo-item:first-of-type {
+      border-top: 0;
+    }
+
+    .num {
+      font-size: 27px;
+      font-weight: 900;
+    }
+
+    .ico {
+      width: 50px;
+      height: 42px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, .14);
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+    }
+
+    .promo-item b {
+      font-size: 18px;
+    }
+
+    .promo-item small {
+      display: block;
+      margin-top: 5px;
+      opacity: .9;
+    }
+
+    .internal-calendar {
+      margin-top: 18px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, var(--primary), #224E82);
+      color: white;
+    }
+
+    .internal-calendar h2 {
+      margin: 0 0 8px;
+      font-size: 23px;
+    }
+
+    .internal-calendar p {
+      margin: 0;
+      opacity: .88;
+      line-height: 1.6;
+    }
+
+    .lock {
+      font-size: 48px;
+    }
+
+    .internal-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .internal-actions .btn.secondary {
+      background: rgba(255, 255, 255, .12);
+      color: white;
+      border-color: rgba(255, 255, 255, .35);
+    }
+
+    .footer {
+      padding: 28px 0 40px;
+      color: #738099;
+      font-size: 13px;
+    }
+
+    /* =========================================
+       9. 모달창 (팝업) 공통 및 세부 디자인
+       ========================================= */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 35, 60, .55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 50;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-card {
+      width: min(520px, 100%);
+      background: white;
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .25);
+    }
+
+    .modal-card h2 {
+      margin: 0 0 10px;
+    }
+
+    .modal-card p {
+      color: var(--sub);
+      line-height: 1.65;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .field input {
+      height: 46px;
+      border: 1px solid #d5deed;
+      border-radius: 10px;
+      padding: 0 13px;
+      font-size: 15px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* 자료센터 모달 */
+    .resource-modal .modal-card {
+      width: min(900px, 100%);
+      max-height: 88vh;
+      overflow: auto;
+      padding: 0;
+    }
+    
+    .resource-modal-head {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 2;
+      padding: 26px 28px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .resource-modal-head h2 { margin: 0; }
+    .resource-modal-head p { margin: 7px 0 0; }
+    
+    .resource-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    
+    .resource-tab {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--sub);
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    
+    .resource-tab.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    
+    .resource-modal-body {
+      padding: 24px 28px 28px;
+    }
+
+    .resource-center-tools {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .resource-search {
+      height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0 14px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .resource-select {
+      height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0 36px 0 13px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .resource-row {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .resource-row+.resource-row {
+      margin-top: 10px;
+    }
+
+    .resource-file-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #EEF4FA;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .resource-main b {
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .resource-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 12px;
+      margin-top: 7px;
+      color: var(--sub);
+      font-size: 13px;
+    }
+
+    .resource-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 9px;
+    }
+
+    .resource-keywords span {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #F3F6FA;
+      color: #41516A;
+      font-size: 12px;
+    }
+
+    .resource-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .resource-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 12px;
+      border: 1px solid #C8D5E4;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .resource-action.download {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .new-badge {
+      display: inline-flex;
+      margin-left: 7px;
+      padding: 3px 6px;
+      border-radius: 999px;
+      background: #FFF0E5;
+      color: #D95B0B;
+      font-size: 10px;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .resource-empty {
+      color: var(--sub);
+      padding: 22px;
+      text-align: center;
+      background: #F8FAFC;
+      border-radius: 14px;
+    }
+
+    .resource-admin-note {
+      margin-top: 16px;
+      padding: 13px 15px;
+      border-radius: 12px;
+      background: #FFF8ED;
+      color: #76501F;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .resource-count-line {
+      font-size: 13px;
+      color: var(--sub);
+      margin-top: 8px;
+    }
+
+    /* 공지사항 상세 모달 */
+    .detail-modal .modal-card {
+      width: min(760px, 100%);
+      max-height: 86vh;
+      overflow: auto;
+    }
+
+    .detail-body {
+      line-height: 1.75;
+      color: #3e4a62;
+      white-space: pre-wrap;
+    }
+
+    .detail-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--sub);
+      font-size: 13px;
+      margin: 10px 0 18px;
+    }
+
+    /* 의견제안 모달 */
+    .proposal-modal .modal-card {
+      width: min(660px, 100%);
+      max-height: 92vh;
+      overflow: auto;
+    }
+
+    .proposal-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .proposal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .proposal-form label {
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--navy);
+    }
+
+    .proposal-form input,
+    .proposal-form select,
+    .proposal-form textarea {
+      width: 100%;
+      border: 1px solid #d5deed;
+      border-radius: 11px;
+      padding: 12px 13px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .proposal-form textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .proposal-recipient {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #FFF4E8;
+      color: #9A3412;
+      font-weight: 800;
+    }
+
+    .proposal-status {
+      display: none;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .proposal-status.show {
+      display: block;
+    }
+
+    .proposal-status.success {
+      background: #ECFDF5;
+      color: #166534;
+    }
+
+    .proposal-status.error {
+      background: #FEF2F2;
+      color: #991B1B;
+    }
+
+    .privacy-box {
+      font-size: 13px;
+      color: var(--sub);
+      line-height: 1.55;
+      background: #F8FAFC;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .privacy-check {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 14px;
+    }
+
+    .privacy-check input {
+      width: auto;
+      margin-top: 3px;
+    }
+
+    .submit-spinner {
+      display: none;
+    }
+
+    .is-loading .submit-label {
+      display: none;
+    }
+
+    .is-loading .submit-spinner {
+      display: inline;
+    }
+
+    .demo-note {
+      font-size: 12px;
+      color: var(--sub);
+      margin-top: 8px;
+    }
+
+    /* =========================================
+       10. 모바일 및 태블릿 반응형 미디어 쿼리
+       ========================================= */
+    @media(max-width: 1100px) {
+      .strip-grid { grid-template-columns: repeat(4, 1fr); }
+      .bottom-tools { grid-template-columns: 1fr !important; }
+      .business-body { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width: 900px) {
+      .resource-grid { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width: 760px) {
+      .resource-center-tools { grid-template-columns: 1fr; }
+      .resource-row { grid-template-columns: 42px minmax(0, 1fr); }
+      .resource-actions { grid-column: 1/-1; justify-content: stretch; }
+      .resource-action { flex: 1; }
+      .wrap { padding: 0 16px; }
+      .topline { height: auto; padding: 16px 0; grid-template-columns: 1fr auto; }
+      .nav { display: none; }
+      .brand b { font-size: 25px; }
+      .brand span { font-size: 22px; }
+      .hero-top-grid { grid-template-columns: 1fr; }
+      .newsletter-card { grid-template-columns: 1fr; }
+      .promo-item { grid-template-columns: 48px 52px 1fr 18px; }
+      .strip-grid { grid-template-columns: repeat(2, 1fr); }
+      .business-head { display: block; }
+      .bottom-tools { grid-template-columns: 1fr; }
+      .internal-calendar { grid-template-columns: 1fr; }
+      .internal-actions { flex-wrap: wrap; }
+      .section-title { font-size: 21px; }
+      .proposal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap topline">
+      <!-----------여기에 링크가 들어가야함------------------>
+      <a class="brand" href="#">
+        <small>대국민 청소년활동 정책</small>
+        <b>온다</b><span>(ON-DA)</span>
+      </a>
+      <div class="utils"><span class="hamb">☰</span></div>
+    </div>
+    <nav class="wrap nav">
+      <a href="#business">정책사업</a>
+      <a href="#finder-section">청소년활동·시설 찾기</a>
+      <a href="#chatbot">챗봇상담</a>
+      <a href="#suggestion">참여·제안</a>
+      <a href="#calendar">시도센터 사업일정</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <!-- 뉴스레터 / 청소년활동 찾기 / 내 주변 시설 찾기 (2 : 1 : 1 비율 배치) -->
+      <div class="hero-top-grid" id="finder-section">
+        <!-- 뉴스레터 영역 (너비 2) -->
+        <div class="panel newsletter">
+          <div class="newsletter-head"><span>최신 뉴스레터</span>
+            <a href="https://www.neusral.com/public_briefings/lLedoIH-z7c0j7dBzRKpHA==" target="_blank" rel="noopener">더보기 ›</a>
+          </div>
+          <div class="newsletter-card">
+            <div class="newsletter-copy">
+              <small>KYWA 뉴스레터</small>
+              <h3>청소년의 오늘을 읽고, 더 나은 내일을 잇다</h3>
+              <p>청소년정책과 활동 현장, 안전 정보, 사회 이슈와 변화까지—청소년을 둘러싼 다양한 소식과 관점을 전합니다.</p>
+              <a class="btn" href="https://www.neusral.com/public_briefings/lLedoIH-z7c0j7dBzRKpHA==" target="_blank" rel="noopener">뉴스레터 자세히 보기 ›</a>
+            </div>
+            <div class="newsletter-art">
+              <!-- 실제 이미지가 없다면 텍스트로 임시 표시 -->
+              <!-- <img src="./img/news.png" alt="뉴스레터 일러스트"> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 청소년활동 찾기 영역 (너비 1) -->
+        <article class="card activity-link-card" id="activity-finder">
+          <h3 class="feature-title title-activity">청소년활동 찾기</h3>
+          <div class="activity-ill">🔎</div>
+          <p>e청소년 활동정보서비스에서 지역·연령·분야별 청소년활동을 찾아보세요.</p>
+          <a class="btn" href="https://www.youth.go.kr/youth/eYouth/main/main.yt?curMenuSn=334" target="_blank" rel="noopener">e청소년에서 활동 찾기 ›</a>
+        </article>
+
+        <!-- 내 주변 시설 찾기 영역 (너비 1) -->
+        <article class="card facility-card" id="facility-finder">
+          <h3 class="feature-title title-facility">내 주변 시설 찾기</h3>
+          <div class="facility-links">
+            <a class="facility-link" href="https://www.youth.go.kr/youth/act/actInstt/actInsttListForm.yt?curMenuSn=477" target="_blank" rel="noopener">
+              <span>📍</span><b>우리 동네 활동기관 찾기</b><em>↗</em>
+            </a>
+            <a class="facility-link" href="https://www.youth.go.kr/youth/act/activityOrg/activityFacilitiesStatusListForm.yt?curMenuSn=2074" target="_blank" rel="noopener">
+              <span>🛡️</span><b>인증수련활동 기관 찾기</b><em>↗</em>
+            </a>
+            <a class="facility-link" href="https://www.youth.go.kr/youth/wdr/intro/intrlInsttSearchLst2.yt?curMenuSn=1594" target="_blank" rel="noopener">
+              <span>🏅</span><b>성취포상활동 기관 찾기</b><em>↗</em>
+            </a>
+            <a class="facility-link" href="https://www.youth.go.kr/youth/dvl/ey/fcltyGrp/vlntwkActFcltyGrpLstForm2.yt?curMenuSn=1591" target="_blank" rel="noopener">
+              <span>💗</span><b>자원봉사활동 기관 찾기</b><em>↗</em>
+            </a>
+            <a class="facility-link" href="https://www.youth.go.kr/youth/youth/contents/promteCnterIntroForm.yt?curMenuSn=1637" target="_blank" rel="noopener">
+              <span>🏢</span><b>시·도 청소년활동진흥센터 찾기</b><em>↗</em>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <section class="service-strip" id="business">
+        <div class="strip-head">
+          <h3 class="feature-title title-policy">정책사업 한눈에 보기</h3>
+          <div style="display:flex;align-items:center;gap:14px">
+            <span class="sync-state" id="syncState">데이터 연동 준비 중</span>
+            <a href="https://www.kywa.or.kr/pressinfo/notice_list.jsp" target="_blank" rel="noopener">전체 공지보기 ›</a>
+          </div>
+        </div>
+        <!-- 탭 버튼들이 동적으로 추가되는 곳 -->
+        <div class="strip-grid" id="businessTabs"></div>
+      </section>
+
+      <section class="business-panel" aria-live="polite">
+        <div class="business-head">
+          <div>
+            <h2 id="businessTitle">사업명</h2>
+            <p id="businessSummary">사업 요약 설명이 들어갑니다.</p>
+            <div class="business-stats">
+              <span class="business-stat" id="noticeStat">📢 공지 0건</span>
+              <span class="business-stat" id="resourceStat">📚 자료 0건</span>
+            </div>
+            <div class="keyword-row" id="keywordRow"></div>
+          </div>
+          <div class="business-links">
+            <!-----------여기에 링크가 들어가야함------------------>
+            <a id="introLink" href="#" class="btn" target="_blank" rel="noopener">사업 소개 보기 ›</a>
+          </div>
+        </div>
+        
+        <div class="business-body">
+          <div class="content-box">
+            <h3>📢 공지사항 및 주요내용</h3>
+            <div id="noticeList"></div>
+          </div>
+          <div class="content-box">
+            <h3>📚 지침 및 매뉴얼</h3>
+            <!-- 자료 3개(법령, 지침, 서식)가 들어가는 3열 그리드 -->
+            <div class="resource-grid" id="resourceList"></div>
+            <button class="btn secondary resource-all" type="button" onclick="openResourceModal()">자료 전체보기</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 하단 도구 영역: AI 챗봇 / 의견제안 / 홍보 (1 : 1 : 2 비율 배치) -->
+      <section class="bottom-tools" id="bottom-tools">
+        <article class="card" id="chatbot">
+          <h3 class="feature-title title-chat">AI 챗봇 상담</h3>
+          <div class="chat-ill">🤖</div>
+          <p>정책, 사업, 지침, 법령 등 궁금한 내용을 청소년정책 AI 비서에게 물어보세요.</p>
+          <a class="btn" href="https://chatgpt.com/g/g-6a72cf43d5c081918e6746f0e1d1aeca-ceongsonyeonjeongcaeg-ai-biseo" target="_blank" rel="noopener noreferrer">청소년정책 AI 비서 열기</a>
+          <small style="display:block;margin-top:10px;color:var(--muted);line-height:1.5">※ ChatGPT 로그인 후 이용할 수 있습니다.</small>
+        </article>
+
+        <article class="card" id="suggestion">
+          <h3 class="feature-title title-idea">의견을 들려주세요</h3>
+          <div class="idea-ill">💡</div>
+          <p>불편한 점이나 새로운 아이디어를 제안해 주세요.</p>
+          <button class="btn" type="button" onclick="openProposalModal()">제안하기</button>
+        </article>
+
+        <div>
+          <h2 class="section-title">한국청소년활동진흥원 홍보</h2>
+          <div class="promo">
+            <a class="promo-item" href="https://www.kywa.or.kr" target="_blank" rel="noopener">
+              <div class="num">01</div>
+              <div class="ico">🖥️</div>
+              <div><b>누리집</b><small>www.kywa.or.kr</small></div>
+              <div>↗</div>
+            </a>
+            <a class="promo-item" href="https://www.youtube.com/@kywa2010" target="_blank" rel="noopener">
+              <div class="num">02</div>
+              <div class="ico">▶️</div>
+              <div><b>유튜브</b><small>youtube.com/@kywa2010</small></div>
+              <div>↗</div>
+            </a>
+            <a class="promo-item" href="https://www.instagram.com/kywa__youthwork/" target="_blank" rel="noopener">
+              <div class="num">03</div>
+              <div class="ico">📷</div>
+              <div><b>인스타그램</b><small>instagram.com/kywa__youthwork</small></div>
+              <div>↗</div>
+            </a>
+            <a class="promo-item" href="https://blog.naver.com/kywa-youth" target="_blank" rel="noopener">
+              <div class="num">04</div>
+              <div class="ico">✍️</div>
+              <div><b>블로그</b><small>blog.naver.com/kywa-youth</small></div>
+              <div>↗</div>
+            </a>
+            <a class="promo-item" href="https://www.facebook.com/kywa0924/" target="_blank" rel="noopener">
+              <div class="num">05</div>
+              <div class="ico">ⓕ</div>
+              <div><b>페이스북</b><small>facebook.com/kywa0924</small></div>
+              <div>↗</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="internal-calendar" id="calendar">
+        <div>
+          <h2>🔒 시·도 청소년활동진흥센터 사업일정</h2>
+          <p>시·도 청소년활동진흥센터와 한국청소년활동진흥원 담당자만 이용하는 내부 공유 일정입니다. 권한이 있는 Google 계정으로 로그인한 뒤 캘린더를 확인하도록 구성할 수 있습니다.</p>
+        </div>
+        <div class="internal-actions">
+          <span class="lock">🗓️</span>
+          <button class="btn" onclick="openCalendarLogin()">내부 일정 로그인</button>
+          <a class="btn secondary" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">Google 캘린더 열기</a>
+        </div>
+      </section>
+
+    </section>
+  </main>
   
-    <div>
-      <h2 class="section-title">한국청소년활동진흥원 홍보</h2>
-      <div class="promo">
-        <a class="promo-item" href="https://www.kywa.or.kr" target="_blank" rel="noopener">
-          <div class="num">01</div>
-          <div class="ico">🖥️</div>
-          <div><b>누리집</b>
-            <small>www.kywa.or.kr</small>
-          </div>
-          <div>↗</div>
-        </a>
-        <a class="promo-item" href="https://www.youtube.com/@kywa2010" target="_blank" rel="noopener">
-          <div class="num">02</div>
-          <div class="ico">▶️</div>
-          <div><b>유튜브</b><small>youtube.com/@kywa2010</small></div><div>↗</div></a>
-        <a class="promo-item" href="https://www.instagram.com/kywa__youthwork/" target="_blank" rel="noopener">
-          <div class="num">03</div>
-          <div class="ico">📷</div>
-          <div>
-            <b>인스타그램</b>
-            <small>instagram.com/kywa__youthwork</small>
-          </div>
-          <div>↗</div>
-        </a>
-        <a class="promo-item" href="https://blog.naver.com/kywa-youth" target="_blank" rel="noopener">
-          <div class="num">04</div>
-          <div class="ico">✍️</div>
-          <div>
-            <b>블로그</b>
-            <small>blog.naver.com/kywa-youth</small>
-          </div>
-          <div>↗</div>
-        </a>
-        <a class="promo-item" href="https://www.facebook.com/kywa0924/" target="_blank" rel="noopener">
-          <div class="num">05</div>
-          <div class="ico">ⓕ</div>
-          <div>
-            <b>페이스북</b>
-            <small>facebook.com/kywa0924</small>
-          </div>
-          <div>↗</div>
-        </a>
-      </div>
-    </div>
-  </section>
+  <footer class="footer">
+    <div class="wrap">대국민 청소년활동 정책 온다(ON-DA) · 화면 시안용 반응형 프로토타입</div>
+  </footer>
 
-  <section class="internal-calendar" id="calendar">
-    <div>
-      <h2>🔒 시·도 청소년활동진흥센터 사업일정</h2>
-      <p>시·도 청소년활동진흥센터와 한국청소년활동진흥원 담당자만 이용하는 내부 공유 일정입니다. 권한이 있는 Google 계정으로 로그인한 뒤 캘린더를 확인하도록 구성할 수 있습니다.</p>
-    </div>
-    <div class="internal-actions">
-      <span class="lock">🗓️</span>
-      <button class="btn" onclick="openCalendarLogin()">내부 일정 로그인</button>
-      <a class="btn secondary" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">Google 캘린더 열기</a>
-    </div>
-  </section>
-
-</section>
-</main>
-<footer class="footer">
-  <div class="wrap">대국민 청소년활동 정책 온다(ON-DA) · 화면 시안용 반응형 프로토타입</div>
-</footer>
-
-
-<div class="modal proposal-modal" id="proposalModal" role="dialog" aria-modal="true" aria-labelledby="proposalModalTitle">
-  <div class="modal-card">
-    <h2 id="proposalModalTitle">ON-DA 의견·제안 보내기</h2>
-    <p>서비스 불편사항과 새로운 아이디어를 한국청소년활동진흥원 활동기획부로 전달합니다.</p>
-    <div class="proposal-recipient">📧 수신: chopink@kywa.or.kr</div>
-    <form id="proposalForm" class="proposal-form">
-      <div class="proposal-grid">
-        <div class="field">
-          <label for="proposalCategory">제안 유형</label>
-          <select id="proposalCategory" name="category">
-            <option>서비스 개선</option>
-            <option>정책사업 제안</option>
-            <option>정보 오류 신고</option>
-            <option>기타</option>
-          </select>
+  <!-- 의견 제안 모달 -->
+  <div class="modal proposal-modal" id="proposalModal" role="dialog" aria-modal="true" aria-labelledby="proposalModalTitle">
+    <div class="modal-card">
+      <h2 id="proposalModalTitle">ON-DA 의견·제안 보내기</h2>
+      <p>서비스 불편사항과 새로운 아이디어를 한국청소년활동진흥원 활동기획부로 전달합니다.</p>
+      <div class="proposal-recipient">📧 수신: chopink@kywa.or.kr</div>
+      <form id="proposalForm" class="proposal-form">
+        <div class="proposal-grid">
+          <div class="field">
+            <label for="proposalCategory">제안 유형</label>
+            <select id="proposalCategory" name="category">
+              <option>서비스 개선</option>
+              <option>정책사업 제안</option>
+              <option>정보 오류 신고</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="proposalName">이름</label>
+            <input id="proposalName" name="name" type="text" maxlength="40" placeholder="선택 입력">
+          </div>
         </div>
         <div class="field">
-          <label for="proposalName">이름</label>
-          <input id="proposalName" name="name" type="text" maxlength="40" placeholder="선택 입력">
+          <label for="proposalEmail">회신받을 이메일</label>
+          <input id="proposalEmail" name="email" type="email" maxlength="120" placeholder="example@email.com">
         </div>
+        <div class="field">
+          <label for="proposalTitle">제목</label>
+          <input id="proposalTitle" name="title" type="text" required maxlength="120" placeholder="제안 제목을 입력해 주세요">
+        </div>
+        <div class="field">
+          <label for="proposalMessage">제안 내용</label>
+          <textarea id="proposalMessage" name="message" required maxlength="4000" placeholder="불편한 점이나 새로운 아이디어를 구체적으로 작성해 주세요"></textarea>
+        </div>
+        <div class="privacy-box">수집 항목: 이름·이메일·제안 내용(이름과 이메일은 선택). 수집 목적: 제안 검토 및 회신. 보유기간은 실제 운영 시 기관 개인정보처리방침에 따라 확정해야 합니다.</div>
+        <label class="privacy-check">
+          <input id="proposalPrivacy" type="checkbox" required>
+          <span>개인정보 수집·이용 안내를 확인했으며 제안 전송에 동의합니다.</span>
+        </label>
+        <div id="proposalStatus" class="proposal-status" role="status" aria-live="polite"></div>
+        <div class="modal-actions">
+          <button class="btn secondary" type="button" onclick="closeProposalModal()">취소</button>
+          <button class="btn" id="proposalSubmit" type="submit">
+            <span class="submit-label">메일 보내기</span>
+            <span class="submit-spinner">전송 중…</span>
+          </button>
+        </div>
+        <div class="demo-note">서버에 Gmail SMTP 환경변수가 설정되면 실제 메일이 전송됩니다. 정적 미리보기에서는 공모전 시연용 전송 완료 화면이 표시됩니다.</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 일정 로그인 모달 -->
+  <div class="modal" id="calendarModal" role="dialog" aria-modal="true" aria-labelledby="calendarModalTitle">
+    <div class="modal-card">
+      <h2 id="calendarModalTitle">시·도센터 사업일정 로그인</h2>
+      <p>실제 운영 시에는 기관 계정 또는 승인된 Google 계정으로 인증합니다. 현재 화면은 접근 구조를 보여주는 시안입니다.</p>
+      <div class="field">
+        <label>기관 이메일</label>
+        <input type="email" placeholder="name@organization.or.kr">
       </div>
       <div class="field">
-        <label for="proposalEmail">회신받을 이메일</label>
-        <input id="proposalEmail" name="email" type="email" maxlength="120" placeholder="example@email.com">
+        <label>비밀번호</label>
+        <input type="password" placeholder="비밀번호">
       </div>
-      <div class="field">
-        <label for="proposalTitle">제목</label>
-        <input id="proposalTitle" name="title" type="text" required maxlength="120" placeholder="제안 제목을 입력해 주세요">
-      </div>
-      <div class="field">
-        <label for="proposalMessage">제안 내용</label>
-        <textarea id="proposalMessage" name="message" required maxlength="4000" placeholder="불편한 점이나 새로운 아이디어를 구체적으로 작성해 주세요"></textarea>
-      </div>
-      <div class="privacy-box">수집 항목: 이름·이메일·제안 내용(이름과 이메일은 선택). 수집 목적: 제안 검토 및 회신. 보유기간은 실제 운영 시 기관 개인정보처리방침에 따라 확정해야 합니다.</div>
-      <label class="privacy-check">
-        <input id="proposalPrivacy" type="checkbox" required>
-        <span>개인정보 수집·이용 안내를 확인했으며 제안 전송에 동의합니다.</span>
-      </label>
-      <div id="proposalStatus" class="proposal-status" role="status" aria-live="polite"></div>
       <div class="modal-actions">
-        <button class="btn secondary" type="button" onclick="closeProposalModal()">취소</button>
-        <button class="btn" id="proposalSubmit" type="submit">
-          <span class="submit-label">메일 보내기</span>
-          <span class="submit-spinner">전송 중…</span>
-        </button>
-      </div>
-      <div class="demo-note">서버에 Gmail SMTP 환경변수가 설정되면 실제 메일이 전송됩니다. 정적 미리보기에서는 공모전 시연용 전송 완료 화면이 표시됩니다.</div>
-    </form>
-  </div>
-</div>
-
-<div class="modal" id="calendarModal" role="dialog" aria-modal="true" aria-labelledby="calendarModalTitle">
-  <div class="modal-card">
-    <h2 id="calendarModalTitle">시·도센터 사업일정 로그인</h2>
-    <p>실제 운영 시에는 기관 계정 또는 승인된 Google 계정으로 인증합니다. 현재 화면은 접근 구조를 보여주는 시안입니다.</p>
-    <div class="field">
-      <label>기관 이메일</label>
-      <input type="email" placeholder="name@organization.or.kr">
-    </div>
-    <div class="field">
-      <label>비밀번호</label>
-      <input type="password" placeholder="비밀번호">
-    </div>
-    <div class="modal-actions">
-      <button class="btn secondary" onclick="closeCalendarLogin()">취소</button>
-      <a class="btn" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">Google 계정으로 계속</a></div>
-  </div>
-</div>
-
-<div class="modal resource-modal" id="resourceModal" role="dialog" aria-modal="true" aria-labelledby="resourceModalTitle">
-  <div class="modal-card">
-    <div class="resource-modal-head">
-      <h2 id="resourceModalTitle">사업 자료 전체보기</h2>
-      <p id="resourceModalDescription">법령, 지침 및 매뉴얼, 관련 서식을 한 화면에서 확인합니다.</p>
-      <div class="resource-tabs" id="resourceTabs">
-        <button class="resource-tab active" data-filter="all">전체</button>
-        <button class="resource-tab" data-filter="law">법령</button>
-        <button class="resource-tab" data-filter="manuals">지침 및 매뉴얼</button>
-        <button class="resource-tab" data-filter="forms">관련 서식</button>
+        <button class="btn secondary" onclick="closeCalendarLogin()">취소</button>
+        <a class="btn" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">Google 계정으로 계속</a>
       </div>
     </div>
-    <div class="resource-center-tools" style="padding:0 28px 10px">
-      <input id="resourceSearch" class="resource-search" type="search" placeholder="자료명·키워드 검색">
-      <select id="resourceAudience" class="resource-select" aria-label="이용대상">
-        <option value="all">대상 전체</option>
-        <option value="시도센터">시도센터</option>
-        <option value="수련시설">수련시설</option>
-        <option value="공통">공통</option>
-      </select>
-      <select id="resourceSort" class="resource-select" aria-label="정렬">
-        <option value="latest">최신순</option>
-        <option value="title">가나다순</option>
-        <option value="type">파일유형순</option>
-      </select>
-    </div>
-    <div class="resource-modal-body" id="resourceModalBody"></div>
-    <div class="modal-actions" style="padding:0 28px 26px">
-      <button class="btn secondary" type="button" onclick="closeResourceModal()">닫기</button>
+  </div>
+
+  <!-- 자료센터 모달 -->
+  <div class="modal resource-modal" id="resourceModal" role="dialog" aria-modal="true" aria-labelledby="resourceModalTitle">
+    <div class="modal-card">
+      <div class="resource-modal-head">
+        <h2 id="resourceModalTitle">사업 자료 전체보기</h2>
+        <p id="resourceModalDescription">법령, 지침 및 매뉴얼, 관련 서식을 한 화면에서 확인합니다.</p>
+        <div class="resource-tabs" id="resourceTabs">
+          <button class="resource-tab active" data-filter="all">전체</button>
+          <button class="resource-tab" data-filter="law">법령</button>
+          <button class="resource-tab" data-filter="manuals">지침 및 매뉴얼</button>
+          <button class="resource-tab" data-filter="forms">관련 서식</button>
+        </div>
+      </div>
+      
+      <div class="resource-center-tools" style="padding:0 28px 10px">
+        <input id="resourceSearch" class="resource-search" type="search" placeholder="자료명·키워드 검색">
+        <select id="resourceAudience" class="resource-select" aria-label="이용대상">
+          <option value="all">대상 전체</option>
+          <option value="시도센터">시도센터</option>
+          <option value="수련시설">수련시설</option>
+          <option value="공통">공통</option>
+        </select>
+        <select id="resourceSort" class="resource-select" aria-label="정렬">
+          <option value="latest">최신순</option>
+          <option value="title">가나다순</option>
+          <option value="type">파일유형순</option>
+        </select>
+      </div>
+      <div class="resource-modal-body" id="resourceModalBody"></div>
+      <div class="modal-actions" style="padding:0 28px 26px">
+        <button class="btn secondary" type="button" onclick="closeResourceModal()">닫기</button>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="modal detail-modal" id="noticeModal" role="dialog" aria-modal="true" aria-labelledby="noticeModalTitle">
-  <div class="modal-card">
-    <h2 id="noticeModalTitle">공지사항</h2>
-    <div class="detail-meta" id="noticeModalMeta"></div>
-    <div class="detail-body" id="noticeModalBody">내용을 불러오는 중입니다.</div>
-    <div class="modal-actions">
-      <button class="btn secondary" onclick="closeNoticeModal()">닫기</button>
-      <a class="btn" id="noticeOriginalLink" target="_blank" rel="noopener">KYWA 원문 보기</a>
+  <!-- 공지사항 상세 모달 -->
+  <div class="modal detail-modal" id="noticeModal" role="dialog" aria-modal="true" aria-labelledby="noticeModalTitle">
+    <div class="modal-card">
+      <h2 id="noticeModalTitle">공지사항</h2>
+      <div class="detail-meta" id="noticeModalMeta"></div>
+      <div class="detail-body" id="noticeModalBody">내용을 불러오는 중입니다.</div>
+      <div class="modal-actions">
+        <button class="btn secondary" onclick="closeNoticeModal()">닫기</button>
+        <!-----------여기에 링크가 들어가야함------------------>
+        <a class="btn" id="noticeOriginalLink" href="#" target="_blank" rel="noopener">KYWA 원문 보기</a>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  const businesses=[
-  {id:'volunteer',emoji:'💗',label:'봉사',name:'청소년자원봉사',summary:'청소년의 자발적인 사회참여와 지역사회 기여를 지원하는 사업입니다.',keywords:['봉사','자원봉사','두볼','활동터전'],intro:'https://www.youth.go.kr/youth/youth/contents/srvcActIntroForm.yt?curMenuSn=297',resources:{law:['청소년활동진흥법','자원봉사활동 기본법'],manuals:['청소년자원봉사 사업 운영지침','활동터전 담당자 매뉴얼'],forms:['활동 신청서','활동 확인서','결과보고서']}},
-  {id:'award',emoji:'🏅',label:'포상',name:'포상제',summary:'국제성취포상제와 청소년자기도전포상제를 통해 청소년의 자기성장과 도전을 지원합니다.',keywords:['포상','국제성취','자기도전','탐험활동','금장','은장','동장'],intro:'https://www.youth.go.kr/youth/youth/contents/intrlSccesRwardIntroForm.yt?curMenuSn=342',resources:{law:['청소년활동진흥법','포상제 운영규정'],manuals:['국제청소년성취포상제 운영지침','청소년자기도전포상제 운영 매뉴얼'],forms:['참가 신청서','활동기록부','포상 승인 요청서']}},
-  {id:'cert',emoji:'🛡️',label:'인증',name:'청소년수련활동 인증제',summary:'청소년수련활동의 안전성과 전문성을 국가가 인증하는 제도입니다.',keywords:['인증','인증제','인증수련활동','인증신청'],intro:'https://www.youth.go.kr/youth/youth/contents/trngActCrtfcIntroForm.yt?curMenuSn=348',resources:{law:['청소년활동진흥법','청소년수련활동인증제 운영규정'],manuals:['인증신청 운영지침','인증 프로그램 작성 매뉴얼'],forms:['인증신청서','프로그램 운영계획서','사후관리 보고서']}},
-  {id:'report',emoji:'📄',label:'신고',name:'청소년수련활동 신고제',summary:'일정 규모 이상의 청소년수련활동을 사전에 신고하여 안전한 운영을 지원합니다.',keywords:['신고','신고제','수련활동 신고','사전신고'],intro:'https://www.youth.go.kr/youth/youth/contents/trngActSttemntIntroForm.yt?curMenuSn=1280',resources:{law:['청소년활동진흥법','청소년수련활동 신고 관련 규정'],manuals:['신고제 운영지침','신고시스템 이용 매뉴얼'],forms:['수련활동 신고서','변경신고서','안전점검표']}},
-  {id:'exchange',emoji:'🌐',label:'교류',name:'청소년 국제교류',summary:'국가 간 청소년 교류와 글로벌 역량 향상을 지원하는 사업입니다.',keywords:['교류','국제교류','국가간교류','해외파견','지도자교류'],intro:'https://www.youth.go.kr/youth/youth/contents/intrlExchgActIntroForm.yt?curMenuSn=369',resources:{law:['청소년기본법','국제교류 안전관리 관련 규정'],manuals:['국제교류 사업 운영지침','참가자·인솔자 운영 매뉴얼'],forms:['참가 신청서','보호자 동의서','결과보고서']}},
-  {id:'participation',emoji:'👥',label:'참여',name:'청소년 정책참여',summary:'청소년이 정책의 제안·논의·결정 과정에 참여하도록 지원합니다.',keywords:['참여','특별회의','정책참여','참여위원회','청소년위원'],intro:'https://www.youth.go.kr/youth/youth/contents/yngbgsSpeclMtg.yt?curMenuSn=373',resources:{law:['청소년기본법','청소년 참여기구 운영 관련 규정'],manuals:['청소년참여기구 운영지침','정책제안 활동 매뉴얼'],forms:['위원 지원서','정책제안서','회의 결과보고서']}},
-  {id:'program',emoji:'🏆',label:'공모',name:'우수 청소년활동 프로그램',summary:'현장 중심의 우수 청소년활동 프로그램 개발·운영·확산을 지원합니다.',keywords:['공모','우수프로그램','지원사업','운영기관 모집','프로그램 지원'],intro:'https://www.youth.go.kr/youth/youth/contents/yngbgsPssrpBsnsIntroForm.yt?curMenuSn=375',resources:{law:['보조금 관리에 관한 법률','청소년활동진흥법'],manuals:['우수프로그램 지원사업 시행지침','보조금 집행·성과관리 매뉴얼'],forms:['사업신청서','예산계획서','결과보고서']}},
-  {id:'leader',emoji:'🧑‍🏫',label:'지도사',name:'청소년지도사 종합정보',summary:'청소년지도사 자격·연수·보수교육 관련 정보를 제공합니다.',keywords:['지도사','청소년지도사','보수교육','자격검정','자격연수'],intro:'https://www.youth.go.kr/youth/youth/contents/yngbgsMapprofsIntroForm.yt?curMenuSn=379',resources:{law:['청소년기본법','청소년지도사 자격검정 및 연수규정'],manuals:['자격연수 운영지침','보수교육 이용 매뉴얼'],forms:['연수 신청서','교육 이수 확인서','경력 확인서']}}
-  ];
-  const demoResourceItems=[{"id": "res-001", "business": "volunteer", "category": "law", "title": "청소년활동진흥법 관련 자료", "file": "resources/volunteer/law/sample-youth-activity-law.txt", "registeredAt": "2026-08-05", "audience": ["공통"], "keywords": ["봉사", "청소년활동진흥법", "법령"], "description": "사업 운영의 법적 근거를 확인하는 시제품 예시 자료", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/volunteer/law/sample-youth-activity-law.txt", "previewUrl": "resources/volunteer/law/sample-youth-activity-law.txt", "isNew": true}, {"id": "res-002", "business": "volunteer", "category": "manuals", "title": "청소년자원봉사 운영지침", "file": "resources/volunteer/manuals/sample-volunteer-manual.txt", "registeredAt": "2026-08-05", "audience": ["시도센터", "수련시설"], "keywords": ["봉사", "자원봉사", "운영지침"], "description": "현장 담당자가 활용하는 운영 기준 예시", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/volunteer/manuals/sample-volunteer-manual.txt", "previewUrl": "resources/volunteer/manuals/sample-volunteer-manual.txt", "isNew": true}, {"id": "res-003", "business": "volunteer", "category": "forms", "title": "청소년자원봉사 결과보고서 서식", "file": "resources/volunteer/forms/sample-volunteer-form.txt", "registeredAt": "2026-08-05", "audience": ["수련시설"], "keywords": ["봉사", "결과보고서", "서식"], "description": "결과보고에 활용하는 시제품 예시 서식", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/volunteer/forms/sample-volunteer-form.txt", "previewUrl": "resources/volunteer/forms/sample-volunteer-form.txt", "isNew": true}, {"id": "res-004", "business": "award", "category": "manuals", "title": "포상제 운영 매뉴얼", "file": "resources/award/manuals/sample-award-manual.txt", "registeredAt": "2026-08-05", "audience": ["공통"], "keywords": ["포상", "국제성취", "자기도전"], "description": "포상제 운영 절차 예시", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/award/manuals/sample-award-manual.txt", "previewUrl": "resources/award/manuals/sample-award-manual.txt", "isNew": true}, {"id": "res-005", "business": "cert", "category": "manuals", "title": "청소년수련활동 인증제 운영지침", "file": "resources/cert/manuals/sample-cert-manual.txt", "registeredAt": "2026-08-05", "audience": ["수련시설"], "keywords": ["인증", "인증제", "운영지침"], "description": "인증 신청과 운영 기준 예시", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/cert/manuals/sample-cert-manual.txt", "previewUrl": "resources/cert/manuals/sample-cert-manual.txt", "isNew": true}, {"id": "res-006", "business": "report", "category": "forms", "title": "청소년수련활동 신고 관련 서식", "file": "resources/report/forms/sample-report-form.txt", "registeredAt": "2026-08-05", "audience": ["수련시설"], "keywords": ["신고", "신고제", "서식"], "description": "신고 업무에 사용하는 예시 서식", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/report/forms/sample-report-form.txt", "previewUrl": "resources/report/forms/sample-report-form.txt", "isNew": true}, {"id": "res-007", "business": "exchange", "category": "manuals", "title": "청소년 국제교류 운영 매뉴얼", "file": "resources/exchange/manuals/sample-exchange-manual.txt", "registeredAt": "2026-08-05", "audience": ["공통"], "keywords": ["교류", "국제교류", "안전"], "description": "국제교류 운영 절차 예시", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/exchange/manuals/sample-exchange-manual.txt", "previewUrl": "resources/exchange/manuals/sample-exchange-manual.txt", "isNew": true}, {"id": "res-008", "business": "participation", "category": "forms", "title": "청소년 정책제안서 서식", "file": "resources/participation/forms/sample-participation-form.txt", "registeredAt": "2026-08-05", "audience": ["공통"], "keywords": ["참여", "정책제안", "서식"], "description": "청소년 정책제안 활동용 예시 서식", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/participation/forms/sample-participation-form.txt", "previewUrl": "resources/participation/forms/sample-participation-form.txt", "isNew": true}, {"id": "res-009", "business": "program", "category": "manuals", "title": "우수 청소년활동 프로그램 지원사업 지침", "file": "resources/program/manuals/sample-program-manual.txt", "registeredAt": "2026-08-05", "audience": ["수련시설"], "keywords": ["공모", "우수프로그램", "지원사업"], "description": "지원사업 신청 및 운영 기준 예시", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/program/manuals/sample-program-manual.txt", "previewUrl": "resources/program/manuals/sample-program-manual.txt", "isNew": true}, {"id": "res-010", "business": "leader", "category": "law", "title": "청소년지도사 관련 법령", "file": "resources/leader/law/sample-leader-law.txt", "registeredAt": "2026-08-05", "audience": ["공통"], "keywords": ["지도사", "자격", "법령"], "description": "청소년지도사 자격 관련 예시 자료", "fileType": "TXT", "fileSize": "시제품", "downloadUrl": "resources/leader/law/sample-leader-law.txt", "previewUrl": "resources/leader/law/sample-leader-law.txt", "isNew": true}];
-  let resourceItems=[...demoResourceItems];
-  const demoNotices={"volunteer":[{"id":"36513","title":"청소년자원봉사 참여후기 이벤트 안내","date":"2026-07-03","author":"관리자","summary":"청소년자원봉사 참여후기 모집 안내입니다.","content":"청소년자원봉사 참여 경험과 활동 소감을 공유하는 후기 이벤트 안내입니다. 참여대상, 접수기간, 제출방법, 선정기준 및 유의사항을 확인할 수 있습니다. 실제 서버 연동 시에는 한국청소년활동진흥원 공지사항에 등록된 원문 상세내용이 이 위치에 표시됩니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36513","matchedKeywords":["봉사","자원봉사"]},{"id":"36510","title":"청소년자원봉사 운영기관 담당자 교육 안내","date":"2025-11-18","author":"관리자","summary":"활동터전 담당자 대상 운영교육 안내입니다.","content":"청소년자원봉사 운영기관과 활동터전 담당자를 대상으로 시스템 활용, 활동 승인, 안전관리, 실적관리 절차를 안내하는 교육입니다. 실제 서버 연동 시 해당 공지의 전체 본문과 첨부파일 정보를 표시합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36510","matchedKeywords":["자원봉사","활동터전"]}],"award":[{"id":"36505","title":"국제청소년성취포상제 탐험활동 참가자 모집","date":"2026-07-09","author":"관리자","summary":"국제청소년성취포상제 탐험활동 참가자 모집 안내입니다.","content":"국제청소년성취포상제 탐험활동 참가자를 모집합니다. 모집대상, 활동일정, 신청방법, 제출서류 및 선발절차를 안내합니다. 실제 서버 연동 시 공지사항의 전체 상세내용이 자동으로 표시됩니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36505","matchedKeywords":["포상","국제성취","탐험활동"]},{"id":"36490","title":"청소년자기도전포상제 운영기관 모집 안내","date":"2025-12-02","author":"관리자","summary":"청소년자기도전포상제 운영기관 모집 안내입니다.","content":"청소년자기도전포상제 운영기관의 신청자격, 운영요건, 담당자 교육, 신청기간 및 제출자료를 안내합니다. 실제 서버 연동 시 해당 제목으로 등록된 상세 본문을 표시합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36490","matchedKeywords":["포상","자기도전"]}],"cert":[{"id":"36485","title":"청소년수련활동인증제 운영체계 도입 안내","date":"2026-06-30","author":"관리자","summary":"인증제 운영체계 변경 안내입니다.","content":"청소년수련활동인증제 운영체계 개편과 적용기준을 안내합니다. 적용시기, 인증신청 절차, 심사기준, 운영기관 준비사항 및 관련 서식에 관한 내용을 포함합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36485","matchedKeywords":["인증","인증제"]},{"id":"36470","title":"청소년수련활동 인증신청 일정 안내","date":"2026-04-17","author":"관리자","summary":"인증신청 일정과 절차 안내입니다.","content":"청소년수련활동 인증신청 접수기간, 심사일정, 신청방법, 필수 제출자료 및 보완절차를 안내합니다. 실제 서버 연동 시 등록된 공지의 전체 본문이 표시됩니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36470","matchedKeywords":["인증","인증신청"]}],"report":[{"id":"36460","title":"청소년수련활동 신고제 운영 안내","date":"2026-03-12","author":"관리자","summary":"수련활동 사전신고 절차 안내입니다.","content":"청소년수련활동 신고 대상, 신고기한, 제출서류, 변경신고 및 처리절차를 안내합니다. 안전관리와 관련된 주요 확인사항도 함께 제공합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36460","matchedKeywords":["신고","신고제","사전신고"]},{"id":"36450","title":"수련활동 신고 담당자 시스템 교육 안내","date":"2025-09-04","author":"관리자","summary":"신고 업무 담당자 대상 교육 안내입니다.","content":"청소년수련활동 신고시스템 이용방법, 접수·보완·처리 절차와 자주 발생하는 오류를 안내하는 교육입니다. 실제 연동 시 공지 원문 상세내용을 표시합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36450","matchedKeywords":["신고","수련활동 신고"]}],"exchange":[{"id":"36440","title":"국가간 청소년교류 참가자 모집 안내","date":"2026-07-03","author":"관리자","summary":"국가간 청소년교류 참가자 모집 안내입니다.","content":"국가간 청소년교류 참가자의 지원자격, 파견일정, 선발절차, 제출서류 및 안전관리 사항을 안내합니다. 실제 서버 연동 시 공지사항의 상세 본문을 표시합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36440","matchedKeywords":["교류","국가간교류"]},{"id":"36430","title":"청소년 해외파견 사업 운영기관 안내","date":"2025-10-21","author":"관리자","summary":"해외파견 사업 운영 관련 안내입니다.","content":"청소년 해외파견 사업의 운영일정, 참가자 관리, 사전교육, 안전관리와 결과보고 절차를 안내합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36430","matchedKeywords":["교류","해외파견"]}],"participation":[{"id":"36420","title":"청소년특별회의 참여 청소년 모집","date":"2026-02-18","author":"관리자","summary":"청소년특별회의 참여자 모집 안내입니다.","content":"청소년특별회의에 참여할 청소년의 모집대상, 신청기간, 활동내용, 선발방법 및 향후 일정을 안내합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36420","matchedKeywords":["참여","특별회의"]},{"id":"36410","title":"청소년정책참여 활동 운영 안내","date":"2025-08-27","author":"관리자","summary":"청소년정책참여 활동 운영 안내입니다.","content":"지역 청소년참여기구 운영, 정책제안 작성, 회의 진행 및 결과공유 절차를 안내합니다. 실제 연동 시 등록된 공지의 상세내용을 표시합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36410","matchedKeywords":["참여","정책참여","참여위원회"]}],"program":[{"id":"36400","title":"우수 청소년활동 프로그램 지원사업 참여기관 모집","date":"2026-06-16","author":"관리자","summary":"우수프로그램 지원사업 참여기관 모집 안내입니다.","content":"우수 청소년활동 프로그램 지원사업의 신청대상, 지원규모, 공모분야, 신청방법, 선정절차와 사업기간을 안내합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36400","matchedKeywords":["공모","우수프로그램","지원사업"]},{"id":"36390","title":"청소년활동 프로그램 운영기관 공모 안내","date":"2025-12-15","author":"관리자","summary":"프로그램 운영기관 공모 안내입니다.","content":"청소년활동 프로그램 운영기관 모집분야, 신청요건, 제출서류, 심사기준과 추진일정을 안내합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36390","matchedKeywords":["공모","운영기관 모집"]}],"leader":[{"id":"36380","title":"청소년지도사 자격연수 운영 안내","date":"2026-06-30","author":"관리자","summary":"청소년지도사 자격연수 일정 안내입니다.","content":"청소년지도사 자격연수 대상, 연수일정, 신청방법, 수료기준 및 준비사항을 안내합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36380","matchedKeywords":["지도사","청소년지도사","자격연수"]},{"id":"36370","title":"청소년지도사 보수교육 신청 안내","date":"2025-11-06","author":"관리자","summary":"청소년지도사 보수교육 신청 안내입니다.","content":"청소년지도사 보수교육 과정, 신청기간, 교육방법, 수료기준과 문의처를 안내합니다.","url":"https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36370","matchedKeywords":["지도사","보수교육"]}]};
-  Object.assign(demoNotices,{
-    volunteer:[
-      {id:'36597',title:'2026년 청소년자원봉사활동 우수사례 공모전 공고',date:'2026-07-30',author:'황소연',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36597',matchedKeywords:['봉사','자원봉사활동']},
-      {id:'36513',title:'e청소년 청소년자원봉사 참여후기 이벤트[나의 봉사 일기, VOL-LOG]',date:'2026-07-03',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36513',matchedKeywords:['봉사','자원봉사']}
-    ],
-    award:[
-      {id:'36582',title:'2026년 청소년수련활동인증제 제도관계자 포상 사전 안내',date:'2026-07-28',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36582',matchedKeywords:['포상']},
-      {id:'36520',title:'2026년 국제청소년성취포상제 금장·은장 탐험활동 참가자 모집 공고',date:'2026-07-09',author:'송애영',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36520',matchedKeywords:['포상','국제청소년성취포상제','탐험활동']}
-    ],
-    cert:[
-      {id:'36598',title:'2026년 청소년수련활동인증제 제도개선 안내(역량기반 청소년활동 인증)',date:'2026-07-30',author:'윤채원',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36598',matchedKeywords:['인증','수련활동인증제']},
-      {id:'36487',title:'청소년수련활동인증제 모듈형 운영체계 정식 도입 및 개별단위프로그램 인증 안내',date:'2026-06-30',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36487',matchedKeywords:['인증','인증제']}
-    ],
-    report:[
-      {id:'26722',title:'[신고제] 보험을 가입할 때에 유의해야 하는 사항을 알고싶어요.',date:'2019-07-25',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=26722',matchedKeywords:['신고제','청소년수련활동 신고']},
-      {id:'26602',title:'[신고제] 신고 완료 후 변경사항이 생겼을 때에는 어떻게 해야하나요?',date:'2019-07-05',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=26602',matchedKeywords:['신고제','변경신고']}
-    ],
-    exchange:[
-      {id:'36505',title:'2026년 한·튀르키예 국가간지도자교류 참가자 모집공고',date:'2026-07-03',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36505',matchedKeywords:['교류','국가간지도자교류']},
-      {id:'36382',title:'2026년 청소년 글로벌 역량강화사업 파견대표단 2차 모집(6.1.~6.15.)',date:'2026-05-29',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36382',matchedKeywords:['교류','글로벌 역량강화']}
-    ],
-    participation:[
-      {id:'36594',title:'2026년  청소년그룹활동지원사업「동아리 자랑 모음.zip」 참여 안내',date:'2026-07-30',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36594',matchedKeywords:['참여']},
-      {id:'35941',title:'제22회 청소년특별회의 청소년위원 모집 공고',date:'2026-02-02',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=35941',matchedKeywords:['특별회의','청소년위원']}
-    ],
-    program:[
-      {id:'36480',title:'2026년 우수 인증수련활동 공모전 선정 결과 안내 공고',date:'2026-06-26',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36480',matchedKeywords:['공모','공모전']},
-      {id:'36432',title:'2026년도 우수 청소년활동 프로그램 지원사업 보급활동(실전형) 참여기관 모집 안내',date:'2026-06-16',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36432',matchedKeywords:['공모','우수 청소년활동 프로그램','지원사업']}
-    ],
-    leader:[
-      {id:'36489',title:'청소년지도사 뭐하지? 아이디어 공모전 모집안내',date:'2026-06-30',author:'관리자',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36489',matchedKeywords:['지도사','공모전']},
-      {id:'35756',title:'2026년 청소년지도사 자격연수 시행계획 공고',date:'2025-11-28',author:'신언광',url:'https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=35756',matchedKeywords:['지도사','자격연수']}
-    ]
-  });
-  const tabs=document.getElementById('businessTabs');
-  let noticesByCategory={...demoNotices};
-  let noticeCache=new Map();
-  function escapeHtml(v=''){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;0'}[m]));}
-  function getNoticeUrl(item){
-    if(item&&item.url&&item.url.includes('notice_view.jsp'))return item.url;
-    const num=String(item.id||'').replace(/\D/g,'');
-    if(num)return `https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=${num}`;
-    if(item&&item.url&&item.url.startsWith('http')&&!item.url.includes('notice_list.jsp'))return item.url;
-    return 'https://www.kywa.or.kr/pressinfo/notice_list.jsp';
+  <script>
+    // =========================================
+    // 1. 전역 변수 설정
+    // =========================================
+    let businesses = [];
+    let resourceItems = [];
+    let noticesByCategory = {};
+    let noticeCache = new Map();
+    let activeBusinessId = 'volunteer';
+    let activeResourceFilter = 'all';
 
-  }
-  function renderNoticeList(b){
-    const source=(noticesByCategory[b.id]||[]).slice(0,2);
-    const items=[...source];
-    while(items.length<2){items.push({id:`empty-${b.id}-${items.length}`,title:'최근 2년 내 추가 공지사항이 없습니다.',date:'',author:'',matchedKeywords:[],isEmpty:true});}
-    const box=document.getElementById('noticeList');
-    box.innerHTML=items.map(n=>{
-      if(n.isEmpty)return `<article class="notice-link notice-empty-slot"><b>${escapeHtml(n.title)}</b><div class="notice-meta"><span>새 공지가 등록되면 자동으로 표시됩니다.</span></div></article>`;
-      const targetUrl = getNoticeUrl(n);
-      return `<article class="notice-link"><a class="notice-title-btn" href="${escapeHtml(targetUrl)}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a><div class="notice-meta"><span>${escapeHtml(n.date||'')}</span><span>${escapeHtml(n.author||'')}</span></div><div class="notice-tags">${(n.matchedKeywords||[]).slice(0,5).map(k=>`<span class="notice-tag">${escapeHtml(k)}</span>`).join('')}</div><div class="notice-actions"><a class="text-btn" href="${escapeHtml(targetUrl)}" target="_blank" rel="noopener">세부내용 보기 ↗</a></div></article>`;
-    }).join('');
-  }
-  let activeBusinessId='volunteer';
-  function resourcesFor(businessId,category='all'){
-    return resourceItems.filter(r=>r.business===businessId&&(category==='all'||r.category===category));
-  }
-  function resourceTotal(b){return resourcesFor(b.id).length}
-  function renderBusiness(id,scroll=true){
-    const b=businesses.find(x=>x.id===id)||businesses[0];activeBusinessId=b.id;
-    document.querySelectorAll('.service').forEach(el=>el.classList.toggle('active',el.dataset.id===b.id));
-    document.getElementById('businessTitle').textContent=`${b.label} · ${b.name}`;
-    document.getElementById('businessSummary').textContent=b.summary;document.getElementById('introLink').href=b.intro;
-    document.getElementById('keywordRow').innerHTML=b.keywords.map(k=>`<span class="keyword-chip">${escapeHtml(k)}</span>`).join('');renderNoticeList(b);
-    const groups=[{key:'law',icon:'⚖️',label:'법령',desc:'사업 운영의 법적 근거와 관련 규정'},{key:'manuals',icon:'📘',label:'지침 및 매뉴얼',desc:'담당자가 바로 활용하는 운영 기준'},{key:'forms',icon:'📝',label:'관련 서식',desc:'신청·운영·보고에 필요한 양식'}];
-    document.getElementById('resourceList').innerHTML=groups.map(g=>{const count=resourcesFor(b.id,g.key).length;return `<button type="button" class="resource" onclick="openResourceModal('${g.key}')" style="text-align:left;cursor:pointer;font:inherit"><span class="resource-count">${count}건</span><span class="resource-icon">${g.icon}</span><strong>${g.label}</strong><small>${g.desc}</small><span class="resource-count-line">등록자료 ${count}건 · 미리보기/다운로드</span></button>`}).join('');
-    document.getElementById('noticeStat').textContent=`📢 공지 ${(noticesByCategory[b.id]||[]).slice(0,2).length}건`;
-    document.getElementById('resourceStat').textContent=`📚 자료 ${resourceTotal(b)}건`;
-    if(scroll)document.querySelector('.business-panel').scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  let activeResourceFilter='all';
-  function openResourceModal(filter='all'){
-    const b=businesses.find(x=>x.id===activeBusinessId)||businesses[0];activeResourceFilter=filter;
-    const modal=document.getElementById('resourceModal');document.getElementById('resourceModalTitle').textContent=`${b.label} · ${b.name} 자료센터`;
-    document.getElementById('resourceModalDescription').textContent='법령, 지침 및 매뉴얼, 관련 서식을 검색하고 미리보거나 다운로드할 수 있습니다.';
-    document.getElementById('resourceSearch').value='';document.getElementById('resourceAudience').value='all';document.getElementById('resourceSort').value='latest';
-    renderResourceModal(filter);modal.classList.add('show');
-  }
-  function formatAudience(a){return Array.isArray(a)?a.join(' · '):(a||'공통')}
-  function resourceIcon(type=''){const t=String(type).toUpperCase();if(t==='PDF')return 'PDF';if(['HWP','HWPX'].includes(t))return 'HWP';if(['XLS','XLSX','CSV'].includes(t))return 'XLS';if(['DOC','DOCX'].includes(t))return 'DOC';if(['PPT','PPTX'].includes(t))return 'PPT';return t||'FILE'}
-  function renderResourceModal(filter=activeResourceFilter){
-    activeResourceFilter=filter;const b=businesses.find(x=>x.id===activeBusinessId)||businesses[0];
-    document.querySelectorAll('.resource-tab').forEach(x=>x.classList.toggle('active',x.dataset.filter===filter));
-    const q=(document.getElementById('resourceSearch')?.value||'').trim().toLowerCase();const audience=document.getElementById('resourceAudience')?.value||'all';const sort=document.getElementById('resourceSort')?.value||'latest';
-    let items=resourcesFor(b.id,filter).filter(r=>{const text=[r.title,r.description,...(r.keywords||[])].join(' ').toLowerCase();const aud=Array.isArray(r.audience)?r.audience:[r.audience];return(!q||text.includes(q))&&(audience==='all'||aud.includes(audience)||aud.includes('공통'));});
-    items.sort((a,z)=>sort==='title'?a.title.localeCompare(z.title,'ko'):sort==='type'?String(a.fileType).localeCompare(String(z.fileType)):String(a.registeredAt||'').localeCompare(String(a.registeredAt||'')));
-    const body=document.getElementById('resourceModalBody');
-    if(!items.length){body.innerHTML='<div class="resource-empty">조건에 맞는 자료가 없습니다.</div>';return;}
-    body.innerHTML=`<div class="resource-count-line" style="margin:0 0 12px">총 ${items.length}건</div>`+items.map(r=>`<article class="resource-row"><div class="resource-file-icon">${escapeHtml(resourceIcon(r.fileType))}</div><div class="resource-main"><b>${escapeHtml(r.title)}${r.isNew?'<span class="new-badge">NEW</span>':''}</b><div class="resource-meta"><span>${escapeHtml(r.fileType||'FILE')}</span><span>${escapeHtml(r.fileSize||'')}</span><span>${escapeHtml(r.registeredAt||'')}</span><span>대상 ${escapeHtml(formatAudience(r.audience))}</span></div><div class="resource-keywords">${(r.keywords||[]).slice(0,5).map(k=>`<span>#${escapeHtml(k)}</span>`).join('')}</div><small style="display:block;margin-top:8px;color:var(--muted)">${escapeHtml(r.description||'')}</small></div><div class="resource-actions"><a class="resource-action" href="${escapeHtml(r.previewUrl||r.downloadUrl||'#')}" target="_blank" rel="noopener">미리보기</a><a class="resource-action download" href="${escapeHtml(r.downloadUrl||'#')}" download>다운로드</a></div></article>`).join('')+`<div class="resource-admin-note">관리자는 <b>resources/resources.csv</b>에 한 줄을 추가하고 지정 폴더에 파일을 넣으면 자료를 등록할 수 있습니다.</div>`;
-  }
-  function closeResourceModal(){document.getElementById('resourceModal').classList.remove('show')}
-  document.getElementById('resourceModal').addEventListener('click',e=>{if(e.target.id==='resourceModal')closeResourceModal()});
-  document.querySelectorAll('.resource-tab').forEach(btn=>btn.addEventListener('click',()=>renderResourceModal(btn.dataset.filter)));
-  ['resourceSearch','resourceAudience','resourceSort'].forEach(id=>document.getElementById(id)?.addEventListener(id==='resourceSearch'?'input':'change',()=>renderResourceModal(activeResourceFilter)));
-  businesses.forEach((b,i)=>{const btn=document.createElement('button');btn.className='service'+(i===0?' active':'');btn.dataset.id=b.id;btn.innerHTML=`<div class="emoji">${b.emoji}</div><div class="label2">${b.label}</div><small>${b.name}</small>`;btn.addEventListener('click',()=>renderBusiness(b.id));tabs.appendChild(btn)});
-  async function loadNotices(){const state=document.getElementById('syncState');try{state.textContent='KYWA 최신 공지 불러오는 중…';const res=await fetch('/api/notices');if(!res.ok)throw new Error('API error');const data=await res.json();noticesByCategory=data.categories||noticesByCategory;(data.items||[]).forEach(n=>noticeCache.set(String(n.id),n));state.textContent=`최근 동기화 ${data.syncedAtLabel||''}`;renderBusiness(document.querySelector('.service.active')?.dataset.id||'volunteer',false);}catch(e){state.textContent='화면 예시 데이터 표시 중';renderBusiness('volunteer',false);}}
-  async function openNotice(id,category){
-    const modal=document.getElementById('noticeModal');
-    const item=(noticesByCategory[category]||[]).find(n=>String(n.id)===String(id))||noticeCache.set(String(id));
-    if(!item||item.isEmpty)return;
-    modal.classList.add('show');
-    document.getElementById('noticeModalTitle').textContent=item.title||'공지사항';
-    document.getElementById('noticeModalMeta').innerHTML=`<span>${escapeHtml(item.date||'')}</span><span>${escapeHtml(item.author||'')}</span>`;
-    const body=document.getElementById('noticeModalBody');
-    const originalLink=document.getElementById('noticeOriginalLink');
-    const targetUrl=getNoticeUrl(item);
-    originalLink.href=targetUrl;
-    originalLink.style.display='inline-flex';
-    body.innerHTML='<p>해당 공지의 상세내용을 불러오는 중입니다.</p>';
-    if(item.content){
-      if(item.contentHtml){body.innerHTML=item.contentHtml;}else{body.textContent=item.content;}
-      return;
+    const tabs = document.getElementById('businessTabs');
 
+    // =========================================
+    // 2. 유틸리티 함수
+    // =========================================
+    function escapeHtml(v = '') {
+      return String(v).replace(/[&<>"']/g, m => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      }[m]));
     }
-    try{
-      const res=await fetch(`/api/notices/${encodeURIComponent(item.id)}`);
-      if(!res.ok)throw new Error('detail fetch failed');
-      const detail=await res.json();
-      noticeCache.set(String(item.id),detail);
-      if(detail.contentHtml){body.innerHTML=detail.contentHtml;}else{body.textContent=detail.content||detail.summary||'등록된 상세내용이 없습니다.';}
-      originalLink.href=getNoticeUrl(detail);
-    }catch(e){
-      body.textContent=item.summary||'상세내용을 불러오지 못했습니다.';
-    }
-  }
-  function closeNoticeModal(){document.getElementById('noticeModal').classList.remove('show')}
-  document.getElementById('noticeModal').addEventListener('click',e=>{if(e.target.id==='noticeModal')closeNoticeModal()});
-  async function loadResources(){try{const res=await fetch('/api/resources');if(!res.ok)throw new Error('resource API');const data=await res.json();if(Array.isArray(data.items)&&data.items.length)resourceItems=data.items;}catch(e){resourceItems=[...demoResourceItems];}renderBusiness(activeBusinessId,false);}
-  renderBusiness('volunteer',false);loadResources();loadNotices();
 
-  function openProposalModal(){
-    const modal=document.getElementById('proposalModal');
-    document.getElementById('proposalStatus').className='proposal-status';
-    document.getElementById('proposalStatus').textContent='';
-    modal.classList.add('show');
-    setTimeout(()=>document.getElementById('proposalTitle').focus(),100);
-  }
-  function closeProposalModal(){document.getElementById('proposalModal').classList.remove('show')}
-  document.getElementById('proposalModal').addEventListener('click',e=>{if(e.target.id==='proposalModal')closeProposalModal()});
-  document.getElementById('proposalForm').addEventListener('submit',async e=>{
-    e.preventDefault();
-    const form=e.currentTarget;
-    const button=document.getElementById('proposalSubmit');
-    const status=document.getElementById('proposalStatus');
-    button.disabled=true;button.classList.add('is-loading');
-    status.className='proposal-status';status.textContent='';
-    const payload={
-      category:document.getElementById('proposalCategory').value,
-      name:document.getElementById('proposalName').value.trim(),
-      email:document.getElementById('proposalEmail').value.trim(),
-      title:document.getElementById('proposalTitle').value.trim(),
-      message:document.getElementById('proposalMessage').value.trim()
-    };
-    try{
-      let result;
-      if(location.protocol==='file:'){
-        await new Promise(r=>setTimeout(r,900));
-        result={success:true,demo:true,receiptId:'ONDA-DEMO-'+Date.now(),message:'공모전 시연용으로 제안 메일 전송 과정을 완료했습니다.'};
-      }else{
-        const res=await fetch('/api/proposals',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-        result=await res.json().catch(()=>({}));
-        if(!res.ok)throw new Error(result.message||'메일 전송에 실패했습니다.');
+    function getNoticeUrl(item) {
+      if (item && item.url && item.url.includes('notice_view.jsp')) return item.url;
+      const num = String(item.id || '').replace(/\D/g, '');
+      if (num) return `https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=${num}`;
+      if (item && item.url && item.url.startsWith('http') && !item.url.includes('notice_list.jsp')) return item.url;
+      return 'https://www.kywa.or.kr/pressinfo/notice_list.jsp';
+    }
+
+    function resourcesFor(businessId, category = 'all') {
+      return resourceItems.filter(r => r.business === businessId && (category === 'all' || r.category === category));
+    }
+
+    function resourceTotal(b) {
+      return resourcesFor(b.id).length;
+    }
+
+    function formatAudience(a) {
+      return Array.isArray(a) ? a.join(' · ') : (a || '공통');
+    }
+
+    function resourceIcon(type = '') {
+      const t = String(type).toUpperCase();
+      if (t === 'PDF') return 'PDF';
+      if (['HWP', 'HWPX'].includes(t)) return 'HWP';
+      if (['XLS', 'XLSX', 'CSV'].includes(t)) return 'XLS';
+      if (['DOC', 'DOCX'].includes(t)) return 'DOC';
+      if (['PPT', 'PPTX'].includes(t)) return 'PPT';
+      return t || 'FILE';
+    }
+
+    // =========================================
+    // 3. UI 렌더링 함수 (메인 화면)
+    // =========================================
+    function renderNoticeList(b) {
+      const source = (noticesByCategory[b.id] || []).slice(0, 2);
+      const items = [...source];
+      
+      // 공지가 2개 미만일 경우 빈 슬롯으로 채우기
+      while (items.length < 2) {
+        items.push({
+          id: `empty-${b.id}-${items.length}`,
+          title: '최근 2년 내 추가 공지사항이 없습니다.',
+          date: '',
+          author: '',
+          matchedKeywords: [],
+          isEmpty: true
+        });
       }
-      status.className='proposal-status show success';
-      status.innerHTML=`✅ ${escapeHtml(result.message||'제안이 전송되었습니다.')}<br><small>수신: chopink@kywa.or.kr${result.receiptId?' · 접수번호 '+escapeHtml(result.receiptId):''}</small>${result.demo?'<br><small>※ 현재는 시연 모드이며 실제 수신함에는 도착하지 않습니다.</small>':''}`;
-      form.reset();
-    }catch(err){
-      status.className='proposal-status show error';
-      status.textContent='⚠️ '+(err.message||'메일 전송 중 오류가 발생했습니다.');
-    }finally{button.disabled=false;button.classList.remove('is-loading')}
-  });
+      
+      const box = document.getElementById('noticeList');
+      box.innerHTML = items.map(n => {
+        if (n.isEmpty) {
+          return `
+            <article class="notice-link notice-empty-slot">
+              <b>${escapeHtml(n.title)}</b>
+              <div class="notice-meta"><span>새 공지가 등록되면 자동으로 표시됩니다.</span></div>
+            </article>
+          `;
+        }
+        
+        const targetUrl = getNoticeUrl(n);
+        const tagsHtml = (n.matchedKeywords || []).slice(0, 5)
+          .map(k => `<span class="notice-tag">${escapeHtml(k)}</span>`).join('');
+          
+        return `
+          <article class="notice-link">
+            <a class="notice-title-btn" href="${escapeHtml(targetUrl)}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a>
+            <div class="notice-meta">
+              <span>${escapeHtml(n.date || '')}</span>
+              <span>${escapeHtml(n.author || '')}</span>
+            </div>
+            <div class="notice-tags">${tagsHtml}</div>
+            <div class="notice-actions">
+              <a class="text-btn" href="${escapeHtml(targetUrl)}" target="_blank" rel="noopener">세부내용 보기 ↗</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
 
-  function openCalendarLogin(){document.getElementById('calendarModal').classList.add('show')}function closeCalendarLogin(){document.getElementById('calendarModal').classList.remove('show')}document.getElementById('calendarModal').addEventListener('click',e=>{if(e.target.id==='calendarModal')closeCalendarLogin()});
-</script>
+    function renderBusiness(id, scroll = true) {
+      const b = businesses.find(x => x.id === id) || businesses[0];
+      if (!b) return;
+      
+      activeBusinessId = b.id;
+
+      // 탭 활성화 상태 변경
+      document.querySelectorAll('.service').forEach(el => el.classList.toggle('active', el.dataset.id === b.id));
+      
+      // 텍스트 정보 업데이트
+      document.getElementById('businessTitle').textContent = `${b.label} · ${b.name}`;
+      document.getElementById('businessSummary').textContent = b.summary;
+      
+      const introLink = document.getElementById('introLink');
+      introLink.href = b.intro || "#"; // intro 속성이 있으면 사용, 없으면 '#'
+
+      document.getElementById('keywordRow').innerHTML = b.keywords.map(k => `<span class="keyword-chip">${escapeHtml(k)}</span>`).join('');
+      
+      // 공지사항 렌더링
+      renderNoticeList(b);
+
+      // 자료 센터 통계 렌더링
+      const groups = [
+        { key: 'law', icon: '⚖️', label: '법령', desc: '사업 운영의 법적 근거와 관련 규정' },
+        { key: 'manuals', icon: '📘', label: '지침 및 매뉴얼', desc: '담당자가 바로 활용하는 운영 기준' },
+        { key: 'forms', icon: '📝', label: '관련 서식', desc: '신청·운영·보고에 필요한 양식' }
+      ];
+
+      document.getElementById('resourceList').innerHTML = groups.map(g => {
+        const count = resourcesFor(b.id, g.key).length;
+        return `
+          <button type="button" class="resource" onclick="openResourceModal('${g.key}')" style="text-align:left;cursor:pointer;font:inherit">
+            <span class="resource-count">${count}건</span>
+            <span class="resource-icon">${g.icon}</span>
+            <strong>${g.label}</strong>
+            <small>${g.desc}</small>
+            <span class="resource-count-line">등록자료 ${count}건 · 미리보기/다운로드</span>
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('noticeStat').textContent = `📢 공지 ${(noticesByCategory[b.id] || []).slice(0, 2).length}건`;
+      document.getElementById('resourceStat').textContent = `📚 자료 ${resourceTotal(b)}건`;
+
+      if (scroll) {
+        document.querySelector('.business-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function renderTabsHTML() {
+      tabs.innerHTML = '';
+      businesses.forEach((b, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'service' + (i === 0 ? ' active' : '');
+        btn.dataset.id = b.id;
+        btn.innerHTML = `
+          <div class="emoji">${b.emoji}</div>
+          <div class="label2">${b.label}</div>
+          <small>${b.name}</small>
+        `;
+        btn.addEventListener('click', () => renderBusiness(b.id));
+        tabs.appendChild(btn);
+      });
+    }
+
+    // =========================================
+    // 4. 모달(팝업창) 관련 로직
+    // =========================================
+    function openResourceModal(filter = 'all') {
+      const b = businesses.find(x => x.id === activeBusinessId) || businesses[0];
+      activeResourceFilter = filter;
+      const modal = document.getElementById('resourceModal');
+      
+      document.getElementById('resourceModalTitle').textContent = `${b.label} · ${b.name} 자료센터`;
+      document.getElementById('resourceModalDescription').textContent = '법령, 지침 및 매뉴얼, 관련 서식을 검색하고 미리보거나 다운로드할 수 있습니다.';
+      document.getElementById('resourceSearch').value = '';
+      document.getElementById('resourceAudience').value = 'all';
+      document.getElementById('resourceSort').value = 'latest';
+      
+      renderResourceModal(filter);
+      modal.classList.add('show');
+    }
+
+    function renderResourceModal(filter = activeResourceFilter) {
+      activeResourceFilter = filter;
+      const b = businesses.find(x => x.id === activeBusinessId) || businesses[0];
+      
+      document.querySelectorAll('.resource-tab').forEach(x => x.classList.toggle('active', x.dataset.filter === filter));
+      
+      const q = (document.getElementById('resourceSearch')?.value || '').trim().toLowerCase();
+      const audience = document.getElementById('resourceAudience')?.value || 'all';
+      const sort = document.getElementById('resourceSort')?.value || 'latest';
+      
+      let items = resourcesFor(b.id, filter).filter(r => {
+        const text = [r.title, r.description, ...(r.keywords || [])].join(' ').toLowerCase();
+        const aud = Array.isArray(r.audience) ? r.audience : [r.audience];
+        return (!q || text.includes(q)) && (audience === 'all' || aud.includes(audience) || aud.includes('공통'));
+      });
+      
+      items.sort((a, z) => {
+        if (sort === 'title') return a.title.localeCompare(z.title, 'ko');
+        if (sort === 'type') return String(a.fileType).localeCompare(String(z.fileType));
+        return String(z.registeredAt || '').localeCompare(String(a.registeredAt || ''));
+      });
+      
+      const body = document.getElementById('resourceModalBody');
+      if (!items.length) {
+        body.innerHTML = '<div class="resource-empty">조건에 맞는 자료가 없습니다.</div>';
+        return;
+      }
+      
+      const itemsHtml = items.map(r => `
+        <article class="resource-row">
+          <div class="resource-file-icon">${escapeHtml(resourceIcon(r.fileType))}</div>
+          <div class="resource-main">
+            <b>${escapeHtml(r.title)}${r.isNew ? '<span class="new-badge">NEW</span>' : ''}</b>
+            <div class="resource-meta">
+              <span>${escapeHtml(r.fileType || 'FILE')}</span>
+              <span>${escapeHtml(r.fileSize || '')}</span>
+              <span>${escapeHtml(r.registeredAt || '')}</span>
+              <span>대상 ${escapeHtml(formatAudience(r.audience))}</span>
+            </div>
+            <div class="resource-keywords">
+              ${(r.keywords || []).slice(0, 5).map(k => `<span>#${escapeHtml(k)}</span>`).join('')}
+            </div>
+            <small style="display:block;margin-top:8px;color:var(--sub)">${escapeHtml(r.description || '')}</small>
+          </div>
+          <div class="resource-actions">
+            <a class="resource-action" href="${escapeHtml(r.previewUrl || r.downloadUrl || '#')}" target="_blank" rel="noopener">미리보기</a>
+            <a class="resource-action download" href="${escapeHtml(r.downloadUrl || '#')}" download>다운로드</a>
+          </div>
+        </article>
+      `).join('');
+      
+      body.innerHTML = `
+        <div class="resource-count-line" style="margin:0 0 12px">총 ${items.length}건</div>
+        ${itemsHtml}
+        <div class="resource-admin-note">관리자는 <b>resources/resources.csv</b>에 한 줄을 추가하고 지정 폴더에 파일을 넣으면 자료를 등록할 수 있습니다.</div>
+      `;
+    }
+
+    function closeResourceModal() { document.getElementById('resourceModal').classList.remove('show'); }
+    function closeNoticeModal() { document.getElementById('noticeModal').classList.remove('show'); }
+    
+    function openProposalModal() {
+      const modal = document.getElementById('proposalModal');
+      const status = document.getElementById('proposalStatus');
+      status.className = 'proposal-status';
+      status.textContent = '';
+      modal.classList.add('show');
+      setTimeout(() => document.getElementById('proposalTitle').focus(), 100);
+    }
+    
+    function closeProposalModal() { document.getElementById('proposalModal').classList.remove('show'); }
+    function openCalendarLogin() { document.getElementById('calendarModal').classList.add('show'); }
+    function closeCalendarLogin() { document.getElementById('calendarModal').classList.remove('show'); }
+
+    // =========================================
+    // 5. 이벤트 리스너 등록
+    // =========================================
+    document.getElementById('resourceModal').addEventListener('click', e => { if (e.target.id === 'resourceModal') closeResourceModal() });
+    document.querySelectorAll('.resource-tab').forEach(btn => btn.addEventListener('click', () => renderResourceModal(btn.dataset.filter)));
+    ['resourceSearch', 'resourceAudience', 'resourceSort'].forEach(id => {
+      document.getElementById(id)?.addEventListener(id === 'resourceSearch' ? 'input' : 'change', () => renderResourceModal(activeResourceFilter));
+    });
+    
+    document.getElementById('noticeModal').addEventListener('click', e => { if (e.target.id === 'noticeModal') closeNoticeModal() });
+    document.getElementById('proposalModal').addEventListener('click', e => { if (e.target.id === 'proposalModal') closeProposalModal() });
+    document.getElementById('calendarModal').addEventListener('click', e => { if (e.target.id === 'calendarModal') closeCalendarLogin() });
+
+    // 제안하기 폼 제출 이벤트
+    document.getElementById('proposalForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const button = document.getElementById('proposalSubmit');
+      const status = document.getElementById('proposalStatus');
+      
+      button.disabled = true;
+      button.classList.add('is-loading');
+      status.className = 'proposal-status';
+      status.textContent = '';
+      
+      const payload = {
+        category: document.getElementById('proposalCategory').value,
+        name: document.getElementById('proposalName').value.trim(),
+        email: document.getElementById('proposalEmail').value.trim(),
+        title: document.getElementById('proposalTitle').value.trim(),
+        message: document.getElementById('proposalMessage').value.trim()
+      };
+      
+      try {
+        let result;
+        if (location.protocol === 'file:' || true) { // 미리보기 환경에서는 항상 데모 모드로 작동
+          await new Promise(r => setTimeout(r, 900));
+          result = { success: true, demo: true, receiptId: 'ONDA-DEMO-' + Date.now(), message: '공모전 시연용으로 제안 메일 전송 과정을 완료했습니다.' };
+        } else {
+          const res = await fetch('/api/proposals', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+          result = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(result.message || '메일 전송에 실패했습니다.');
+        }
+        status.className = 'proposal-status show success';
+        status.innerHTML = `✅ ${escapeHtml(result.message || '제안이 전송되었습니다.')}<br><small>수신: chopink@kywa.or.kr${result.receiptId ? ' · 접수번호 ' + escapeHtml(result.receiptId) : ''}</small>${result.demo ? '<br><small>※ 현재는 시연 모드이며 실제 수신함에는 도착하지 않습니다.</small>' : ''}`;
+        form.reset();
+      } catch (err) {
+        status.className = 'proposal-status show error';
+        status.textContent = '⚠️ ' + (err.message || '메일 전송 중 오류가 발생했습니다.');
+      } finally {
+        button.disabled = false;
+        button.classList.remove('is-loading');
+      }
+    });
+
+    // =========================================
+    // 6. 데이터 로딩 (data.json Fetch)
+    // =========================================
+    async function loadData() {
+      const state = document.getElementById('syncState');
+      try {
+        state.textContent = '데이터 불러오는 중…';
+        
+        // data.json 파일을 비동기적으로 가져옵니다.
+        const res = await fetch('data.json');
+        if (!res.ok) throw new Error('data.json 파일을 불러오지 못했습니다.');
+        
+        const data = await res.json();
+        businesses = data.businesses || [];
+        resourceItems = data.resources || [];
+        noticesByCategory = data.notices || {};
+        
+        state.textContent = '데이터 연동 완료';
+      } catch (e) {
+        console.error('데이터 로드 오류:', e);
+        state.textContent = '데이터를 불러오지 못했습니다.';
+      } finally {
+        if (businesses.length > 0) {
+          renderTabsHTML();
+          renderBusiness('volunteer', false);
+        }
+      }
+    }
+
+    // 스크립트 실행
+    loadData();
+  </script>
 </body>
 </html>
