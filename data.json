@@ -1,0 +1,38 @@
+// 정책사업 탭 목록 (화면 구성용)
+const businesses = [
+  { id: 'volunteer', emoji: '💗', label: '봉사', name: '청소년자원봉사', summary: '청소년의 자발적인 사회참여와 지역사회 기여를 지원하는 사업입니다.', intro: 'https://www.youth.go.kr/...' },
+  { id: 'award', emoji: '🏅', label: '포상', name: '포상제', summary: '청소년의 자기성장과 도전을 지원합니다.', intro: 'https://www.youth.go.kr/...' },
+  { id: 'cert', emoji: '🛡️', label: '인증', name: '청소년수련활동 인증제', summary: '안전성과 전문성을 국가가 인증하는 제도입니다.', intro: 'https://www.youth.go.kr/...' }
+];
+
+// 자료실 데이터 (여기에만 구글 드라이브 링크를 추가하세요!)
+const demoResourceItems = [
+  {
+    "business": "volunteer", 
+    "category": "law", 
+    "title": "자원봉사활동 기본법", 
+    "url": "여기에_구글드라이브_링크"
+  },
+  {
+    "business": "volunteer", 
+    "category": "manuals", 
+    "title": "2026년 청소년자원봉사 운영지침", 
+    "url": "여기에_구글드라이브_링크"
+  },
+  {
+    "business": "cert", 
+    "category": "forms", 
+    "title": "청소년수련활동 인증신청서 양식", 
+    "url": "여기에_구글드라이브_링크"
+  }
+];// --- [2] 공지사항 데이터 ---
+// 공지사항도 제목과 링크만 남겼습니다!
+const demoNotices = {
+  volunteer: [
+    { title: '2026년 청소년자원봉사활동 우수사례 공모전 공고', url: '공지사항_링크_넣기' },
+    { title: 'e청소년 청소년자원봉사 참여후기 이벤트', url: '공지사항_링크_넣기' }
+  ],
+  award: [
+    { title: '2026년 청소년수련활동인증제 포상 안내', url: '공지사항_링크_넣기' }
+  ]
+};
