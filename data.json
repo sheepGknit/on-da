@@ -1,133 +1,18 @@
 {
   "businesses": [
-    {
-		"id": "volunteer",
-		"emoji": "💗",
-		"label": "봉사",
-		"name": "청소년자원봉사",
-		"summary": "청소년의 자발적인 사회참여와 지역사회 기여를 지원하는 사업입니다.",
-		"keywords": ["봉사", "자원봉사", "두볼", "활동터전"],
-		"intro": "https://www.youth.go.kr/youth/youth/contents/srvcActIntroForm.yt?curMenuSn=297",
-		"resources": {
-			"law": ["청소년활동진흥법", "자원봉사활동 기본법"],
-			"manuals": ["청소년자원봉사 사업 운영지침", "활동터전 담당자 매뉴얼"],
-			"forms": ["활동 신청서", "활동 확인서", "결과보고서"]
-		}
-	},
 		{
-		  "id": "award",
-		  "emoji": "🏅",
-		  "label": "포상",
-		  "name": "포상제",
-		  "summary": "국제성취포상제와 청소년자기도전포상제를 통해 청소년의 자기성장과 도전을 지원합니다.",
-		  "keywords": ["포상", "국제성취", "자기도전", "탐험활동", "금장", "은장", "동장"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/intrlSccesRwardIntroForm.yt?curMenuSn=342",
-		  "resources": {
-			"law": ["청소년활동진흥법", "포상제 운영규정"],
-			"manuals": ["국제청소년성취포상제 운영지침", "청소년자기도전포상제 운영 매뉴얼"],
-			"forms": ["참가 신청서", "활동기록부", "포상 승인 요청서"]
-		  }
-		},
-		{
-		  "id": "cert",
-		  "emoji": "🛡️",
-		  "label": "인증",
-		  "name": "청소년수련활동 인증제",
-		  "summary": "청소년수련활동의 안전성과 전문성을 국가가 인증하는 제도입니다.",
-		  "keywords": ["인증", "인증제", "인증수련활동", "인증신청"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/trngActCrtfcIntroForm.yt?curMenuSn=348",
-		  "resources": {
-			"law": ["청소년활동진흥법", "청소년수련활동인증제 운영규정"],
-			"manuals": ["인증신청 운영지침", "인증 프로그램 작성 매뉴얼"],
-			"forms": ["인증신청서", "프로그램 운영계획서", "사후관리 보고서"]
-		  }
-		},
-		{
-		  "id": "report",
-		  "emoji": "📄",
-		  "label": "신고",
-		  "name": "청소년수련활동 신고제",
-		  "summary": "일정 규모 이상의 청소년수련활동을 사전에 신고하여 안전한 운영을 지원합니다.",
-		  "keywords": ["신고", "신고제", "수련활동 신고", "사전신고"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/trngActSttemntIntroForm.yt?curMenuSn=1280",
-		  "resources": {
-			"law": ["청소년활동진흥법", "청소년수련활동 신고 관련 규정"],
-			"manuals": ["신고제 운영지침", "신고시스템 이용 매뉴얼"],
-			"forms": ["수련활동 신고서", "변경신고서", "안전점검표"]
-		  }
-		},
-		{
-		  "id": "exchange",
-		  "emoji": "🌐",
-		  "label": "교류",
-		  "name": "청소년 국제교류",
-		  "summary": "국가 간 청소년 교류와 글로벌 역량 향상을 지원하는 사업입니다.",
-		  "keywords": ["교류", "국제교류", "국가간교류", "해외파견", "지도자교류"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/intrlExchgActIntroForm.yt?curMenuSn=369",
-		  "resources": {
-			"law": ["청소년기본법", "국제교류 안전관리 관련 규정"],
-			"manuals": ["국제교류 사업 운영지침", "참가자·인솔자 운영 매뉴얼"],
-			"forms": ["참가 신청서", "보호자 동의서", "결과보고서"]
-		  }
-		},
-		{
-		  "id": "participation",
-		  "emoji": "👥",
-		  "label": "참여",
-		  "name": "청소년 정책참여",
-		  "summary": "청소년이 정책의 제안·논의·결정 과정에 참여하도록 지원합니다.",
-		  "keywords": ["참여", "특별회의", "정책참여", "참여위원회", "청소년위원"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/yngbgsSpeclMtg.yt?curMenuSn=373",
-		  "resources": {
-			"law": ["청소년기본법", "청소년 참여기구 운영 관련 규정"],
-			"manuals": ["청소년참여기구 운영지침", "정책제안 활동 매뉴얼"],
-			"forms": ["위원 지원서", "정책제안서", "회의 결과보고서"]
-		  }
-		},
-		{
-		  "id": "program",
-		  "emoji": "🏆",
-		  "label": "공모",
-		  "name": "우수 청소년활동 프로그램",
-		  "summary": "현장 중심의 우수 청소년활동 프로그램 개발·운영·확산을 지원합니다.",
-		  "keywords": ["공모", "우수프로그램", "지원사업", "운영기관 모집", "프로그램 지원"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/yngbgsPssrpBsnsIntroForm.yt?curMenuSn=375",
-		  "resources": {
-			"law": ["보조금 관리에 관한 법률", "청소년활동진흥법"],
-			"manuals": ["우수프로그램 지원사업 시행지침", "보조금 집행·성과관리 매뉴얼"],
-			"forms": ["사업신청서", "예산계획서", "결과보고서"]
-		  }
-		},
-		{
-		  "id": "leader",
-		  "emoji": "🧑‍🏫",
-		  "label": "지도사",
-		  "name": "청소년지도사 종합정보",
-		  "summary": "청소년지도사 자격·연수·보수교육 관련 정보를 제공합니다.",
-		  "keywords": ["지도사", "청소년지도사", "보수교육", "자격검정", "자격연수"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/yngbgsMapprofsIntroForm.yt?curMenuSn=379",
-		  "resources": {
-			"law": ["청소년기본법", "청소년지도사 자격검정 및 연수규정"],
-			"manuals": ["자격연수 운영지침", "보수교육 이용 매뉴얼"],
-			"forms": ["연수 신청서", "교육 이수 확인서", "경력 확인서"]
-		  }
-		}
-	  ],
-	  {
-	  "businesses": [
-		{
-		  "id": "volunteer",
-		  "emoji": "💗",
-		  "label": "봉사",
-		  "name": "청소년자원봉사",
-		  "summary": "청소년의 자발적인 사회참여와 지역사회 기여를 지원하는 사업입니다.",
-		  "keywords": ["봉사", "자원봉사", "두볼", "활동터전"],
-		  "intro": "https://www.youth.go.kr/youth/youth/contents/srvcActIntroForm.yt?curMenuSn=297",
-		  "resources": {
-			"law": ["청소년활동진흥법", "자원봉사활동 기본법"],
-			"manuals": ["청소년자원봉사 사업 운영지침", "활동터전 담당자 매뉴얼"],
-			"forms": ["활동 신청서", "활동 확인서", "결과보고서"]
-		  }
+			"id": "volunteer",
+			"emoji": "💗",
+			"label": "봉사",
+			"name": "청소년자원봉사",
+			"summary": "청소년의 자발적인 사회참여와 지역사회 기여를 지원하는 사업입니다.",
+			"keywords": ["봉사", "자원봉사", "두볼", "활동터전"],
+			"intro": "https://www.youth.go.kr/youth/youth/contents/srvcActIntroForm.yt?curMenuSn=297",
+			"resources": {
+				"law": ["청소년활동진흥법", "자원봉사활동 기본법"],
+				"manuals": ["청소년자원봉사 사업 운영지침", "활동터전 담당자 매뉴얼"],
+				"forms": ["활동 신청서", "활동 확인서", "결과보고서"]
+			}
 		},
 		{
 		  "id": "award",
@@ -227,7 +112,7 @@
 			"forms": ["연수 신청서", "교육 이수 확인서", "경력 확인서"]
 		  }
 		}
-	  ],
+	],
 	"resources": [	
 		{
 			"business": "volunteer",
@@ -806,8 +691,8 @@
 			"fileSize": "1.6MB",
 			"downloadUrl": "https://drive.google.com/file/d/1F2jnp_ZN0wf2qJtv40VwSQCZw6mcNmBi/view?usp=drive_link",
 			"isNew": true
-		  },
-		  {
+		},
+		{
 			"business": "cert",
 			"category": "manuals",
 			"title": "청소년수련활동인증제 보급형프로그램 활용 가이드북_최종",
@@ -823,8 +708,8 @@
 			"fileSize": "69.6MB",
 			"downloadUrl": "https://drive.google.com/file/d/1LixOQCFW-AbGKSPbc6RpoeIdOftQBkvn/view?usp=drive_link",
 			"isNew": true
-		  },
-		  {
+		},
+		{
 			"business": "award",
 			"category": "law",
 			"title": "국제청소년성취포상제 자기도전포상제 운영 규정",
@@ -840,8 +725,8 @@
 			"fileSize": "2.8MB",
 			"downloadUrl": "https://drive.google.com/file/d/1tJtCO3lDb9zLgISq7utQ9FKIDmGJCf03/view?usp=drive_link",
 			"isNew": true
-		  },
-		  {
+		},
+		{
 			"business": "award",
 			"category": "manuals",
 			"title": "국제청소년성취포상제_포상지도자운영매뉴얼",
@@ -879,130 +764,130 @@
 		  }
 		],
 		"award": [
-		  {
-			"id": "36582",
-			"title": "2026년 청소년수련활동인증제 제도관계자 포상 사전 안내",
-			"date": "2026-07-28",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36582",
-			"matchedKeywords": ["포상"]
-		  },
-		  {
-			"id": "36520",
-			"title": "2026년 국제청소년성취포상제 금장·은장 탐험활동 참가자 모집 공고",
-			"date": "2026-07-09",
-			"author": "송애영",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36520",
-			"matchedKeywords": ["포상", "국제청소년성취포상제", "탐험활동"]
-		  }
+			{
+				"id": "36582",
+				"title": "2026년 청소년수련활동인증제 제도관계자 포상 사전 안내",
+				"date": "2026-07-28",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36582",
+				"matchedKeywords": ["포상"]
+			},
+			{
+				"id": "36520",
+				"title": "2026년 국제청소년성취포상제 금장·은장 탐험활동 참가자 모집 공고",
+				"date": "2026-07-09",
+				"author": "송애영",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36520",
+				"matchedKeywords": ["포상", "국제청소년성취포상제", "탐험활동"]
+			}
 		],
 		"cert": [
-		  {
-			"id": "36598",
-			"title": "2026년 청소년수련활동인증제 제도개선 안내(역량기반 청소년활동 인증)",
-			"date": "2026-07-30",
-			"author": "윤채원",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36598",
-			"matchedKeywords": ["인증", "수련활동인증제"]
-		  },
-		  {
-			"id": "36487",
-			"title": "청소년수련활동인증제 모듈형 운영체계 정식 도입 및 개별단위프로그램 인증 안내",
-			"date": "2026-06-30",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36487",
-			"matchedKeywords": ["인증", "인증제"]
-		  }
+			{
+				"id": "36598",
+				"title": "2026년 청소년수련활동인증제 제도개선 안내(역량기반 청소년활동 인증)",
+				"date": "2026-07-30",
+				"author": "윤채원",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36598",
+				"matchedKeywords": ["인증", "수련활동인증제"]
+			},
+			{
+				"id": "36487",
+				"title": "청소년수련활동인증제 모듈형 운영체계 정식 도입 및 개별단위프로그램 인증 안내",
+				"date": "2026-06-30",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36487",
+				"matchedKeywords": ["인증", "인증제"]
+			}
 		],
 		"report": [
-		  {
-			"id": "26722",
-			"title": "[신고제] 보험을 가입할 때에 유의해야 하는 사항을 알고싶어요.",
-			"date": "2019-07-25",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=26722",
-			"matchedKeywords": ["신고제", "청소년수련활동 신고"]
-		  },
-		  {
-			"id": "26602",
-			"title": "[신고제] 신고 완료 후 변경사항이 생겼을 때에는 어떻게 해야하나요?",
-			"date": "2019-07-05",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=26602",
-			"matchedKeywords": ["신고제", "변경신고"]
-		  }
+			{
+				"id": "26722",
+				"title": "[신고제] 보험을 가입할 때에 유의해야 하는 사항을 알고싶어요.",
+				"date": "2019-07-25",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=26722",
+				"matchedKeywords": ["신고제", "청소년수련활동 신고"]
+			},
+			{
+				"id": "26602",
+				"title": "[신고제] 신고 완료 후 변경사항이 생겼을 때에는 어떻게 해야하나요?",
+				"date": "2019-07-05",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=26602",
+				"matchedKeywords": ["신고제", "변경신고"]
+			}
 		],
 		"exchange": [
-		  {
-			"id": "36505",
-			"title": "2026년 한·튀르키예 국가간지도자교류 참가자 모집공고",
-			"date": "2026-07-03",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36505",
-			"matchedKeywords": ["교류", "국가간지도자교류"]
-		  },
-		  {
-			"id": "36382",
-			"title": "2026년 청소년 글로벌 역량강화사업 파견대표단 2차 모집(6.1.~6.15.)",
-			"date": "2026-05-29",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36382",
-			"matchedKeywords": ["교류", "글로벌 역량강화"]
-		  }
+			{
+				"id": "36505",
+				"title": "2026년 한·튀르키예 국가간지도자교류 참가자 모집공고",
+				"date": "2026-07-03",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36505",
+				"matchedKeywords": ["교류", "국가간지도자교류"]
+			},
+			{
+				"id": "36382",
+				"title": "2026년 청소년 글로벌 역량강화사업 파견대표단 2차 모집(6.1.~6.15.)",
+				"date": "2026-05-29",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36382",
+				"matchedKeywords": ["교류", "글로벌 역량강화"]
+			}
 		],
 		"participation": [
-		  {
-			"id": "36594",
-			"title": "2026년  청소년그룹활동지원사업「동아리 자랑 모음.zip」 참여 안내",
-			"date": "2026-07-30",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36594",
-			"matchedKeywords": ["참여"]
-		  },
-		  {
-			"id": "35941",
-			"title": "제22회 청소년특별회의 청소년위원 모집 공고",
-			"date": "2026-02-02",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=35941",
-			"matchedKeywords": ["특별회의", "청소년위원"]
-		  }
+			{
+				"id": "36594",
+				"title": "2026년  청소년그룹활동지원사업「동아리 자랑 모음.zip」 참여 안내",
+				"date": "2026-07-30",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36594",
+				"matchedKeywords": ["참여"]
+			},
+			{
+				"id": "35941",
+				"title": "제22회 청소년특별회의 청소년위원 모집 공고",
+				"date": "2026-02-02",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=35941",
+				"matchedKeywords": ["특별회의", "청소년위원"]
+			}
 		],
 		"program": [
-		  {
-			"id": "36480",
-			"title": "2026년 우수 인증수련활동 공모전 선정 결과 안내 공고",
-			"date": "2026-06-26",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36480",
-			"matchedKeywords": ["공모", "공모전"]
-		  },
-		  {
-			"id": "36432",
-			"title": "2026년도 우수 청소년활동 프로그램 지원사업 보급활동(실전형) 참여기관 모집 안내",
-			"date": "2026-06-16",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36432",
-			"matchedKeywords": ["공모", "우수 청소년활동 프로그램", "지원사업"]
-		  }
+			{
+				"id": "36480",
+				"title": "2026년 우수 인증수련활동 공모전 선정 결과 안내 공고",
+				"date": "2026-06-26",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36480",
+				"matchedKeywords": ["공모", "공모전"]
+			},
+			{
+				"id": "36432",
+				"title": "2026년도 우수 청소년활동 프로그램 지원사업 보급활동(실전형) 참여기관 모집 안내",
+				"date": "2026-06-16",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36432",
+				"matchedKeywords": ["공모", "우수 청소년활동 프로그램", "지원사업"]
+			}
 		],
 		"leader": [
-		  {
-			"id": "36489",
-			"title": "청소년지도사 뭐하지? 아이디어 공모전 모집안내",
-			"date": "2026-06-30",
-			"author": "관리자",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36489",
-			"matchedKeywords": ["지도사", "공모전"]
-		  },
-		  {
-			"id": "35756",
-			"title": "2026년 청소년지도사 자격연수 시행계획 공고",
-			"date": "2025-11-28",
-			"author": "신언광",
-			"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=35756",
-			"matchedKeywords": ["지도사", "자격연수"]
-		  }
+			{
+				"id": "36489",
+				"title": "청소년지도사 뭐하지? 아이디어 공모전 모집안내",
+				"date": "2026-06-30",
+				"author": "관리자",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36489",
+				"matchedKeywords": ["지도사", "공모전"]
+			},
+			{
+				"id": "35756",
+				"title": "2026년 청소년지도사 자격연수 시행계획 공고",
+				"date": "2025-11-28",
+				"author": "신언광",
+				"url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=35756",
+				"matchedKeywords": ["지도사", "자격연수"]
+			}
 		]
-	  }
+	}
 }
