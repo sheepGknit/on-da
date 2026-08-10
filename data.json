@@ -113,636 +113,175 @@
 		  }
 		}
 	],
-	"resources": [	
-		{
-			"business": "volunteer",
-			"category": "forms",
-			"title": "두볼 두볼 터전 관리자를 위한 안내지_최종",
-			"registeredAt": "2026-08-07",
-			"audience": [
-				  "관리자"
-			],
-			"keywords": [
-				"두볼"
-			],
-			"description": "두볼 터전 관리자를 위한 안내 자료입니다.",
-			"fileType": "PDF",
-			"fileSize": "414KB",
-			"downloadUrl": "https://drive.google.com/file/d/1snaom5icW37R_jwoGLuf71FVWi0PK14S/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "volunteer",
-			"category": "law",
-			"title": "청소년자원봉사활동 관리규정 개정본",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "자원봉사", "규정"
-			],
-			"description": "청소년 자원봉사활동 관리규정",
-			"fileType": "PDF",
-			"fileSize": "1.5MB",
-			"downloadUrl": "https://drive.google.com/file/d/1bOJt_uimO5OBoT85hCOasC3SEbNdEksv/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "volunteer",
-			"category": "manuals",
-			"title": "2026년 자원봉사종합보험 업무매뉴얼.pdf",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "관리자"
-			],
-			"keywords": [
-			  "자원봉사", "매뉴얼", "보험"
-			],
-			"description": "자원봉사 종합보험 가입을 위한 업무 매뉴얼 입니다.",
-			"fileType": "LDH",
-			"fileSize": "7.5MB",
-			"downloadUrl": "https://drive.google.com/file/d/11NrTH-IuT2EaKVDDl--d_HARaHhcoE5B/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "volunteer",
-			"category": "manuals",
-			"title": "청소년자원봉사 Dovol 매뉴얼(지도자)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "지도자"
-			],
-			"keywords": [
-			  "매뉴얼", "지도자"
-			],
-			"description": "지도자를 위한 두볼 매뉴얼입니다.",
-			"fileType": "PDF",
-			"fileSize": "19.8MB",
-			"downloadUrl": "https://drive.google.com/file/d/1Cbfr3Tfv8b6RdTfv-toXV1UoY_OCztbI/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "volunteer",
-			"category": "manuals",
-			"title": "청소년자원봉사 Dovol 매뉴얼(청소년)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "청소년"
-			],
-			"keywords": [
-			  "매뉴얼", "청소년"
-			],
-			"description": "청소년을 위한 두볼 매뉴얼 입니다.",
-			"fileType": "PDF",
-			"fileSize": "12.6MB",
-			"downloadUrl": "https://drive.google.com/file/d/13uCIvDMlJlllDplhs2a-akGWygHE6hS9/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "report",
-			"category": "manuals",
-			"title": "청소년수련활동신고제 매뉴얼(검토기관용)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "매뉴얼", "기관"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "8.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1BE_rksRdwpOc3C_6PUiObxZGLNtXUbn3/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "report",
-			"category": "manuals",
-			"title": "청소년수련활동신고제 매뉴얼(주최기관용)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "매뉴얼", "주최기관"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "6.5MB",
-			"downloadUrl": "https://drive.google.com/file/d/168la6tCfjU8ersrrw8BNaNXx8c1hvOB6/view?usp=sharing",
-			"isNew": true
-		},
-		{
-			"business": "report",
-			"category": "manuals",
-			"title": "청소년수련활동신고제 매뉴얼(처리기관용)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "9.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1XrMn6oQ7UI_4S7UmZdiK-XbTIZR0FluQ/view?usp=drive_link",
-			"isNew": true
-		},
-		{
-			"business": "program",
-			"category": "forms",
-			"title": "2026년도 우수 청소년활동 프로그램 지원사업 참여 안내",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "안내"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "254KB",
-			"downloadUrl": "https://drive.google.com/file/d/1bOM6n9b9QRtwZk-0pWZY71VTtQcN_R8-/view?usp=drive_link",
-			"isNew": true
-		},
-		{
-			"business": "program",
-			"category": "forms",
-			"title": "251103_ai 관련 우수프로그램 발굴보급 현황",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "우수프로그램","사례","현황"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "HWP",
-			"fileSize": "100KB",
-			"downloadUrl": "https://drive.google.com/file/d/1eootL-JyR7cMG9El1KDP3cqhyHT60Esl/view?usp=drive_link",
-			"isNew": true
-		},
-		{
-			"business": "program",
-			"category": "forms",
-			"title": "설명자료(안전지원체계 + 우수프로그램지원사업)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PPTX",
-			"fileSize": "305KB",
-			"downloadUrl": "https://docs.google.com/presentation/d/11LU-aG-bxjhoVxVVm1RQT8N3Ohfu2SR6/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true",
-			"isNew": true
-		},
-		{
-			"business": "program",
-			"category": "law",
-			"title": "붙임v2_2026년 우수 프로그램 지원사업_공고문 등.zip",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "LDH",
-			"fileSize": "1.9MB",
-			"downloadUrl": "https://drive.google.com/file/d/1TAYYrMigeqY-4JIBkJKVyWR-3LbfCdG-/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "program",
-			"category": "manuals",
-			"title": "[매뉴얼] 2026년 우수 청소년활동 프로그램 지원사업 운영 매뉴얼",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "8.4MB",
-			"downloadUrl": "https://drive.google.com/file/d/1dmfYBSdrY0vMrS05kwZlpe9DiVaLvcSM/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "forms",
-			"title": "1._[공유]청소년이_만들어가는_청소년참여활동·청소년참여포털_홍보지",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "1.1MB",
-			"downloadUrl": "https://drive.google.com/file/d/1C51_T0QX5Ou-E1vOmhhm4fKGPBg3TvHd/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "forms",
-			"title": "2._[공유]청소년이_만들어가는_청소년참여활동·청소년참여포털_홍보지(중등)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "1.9MB",
-			"downloadUrl": "https://drive.google.com/file/d/1sMl0aatDXwyD4NX_3-JxxOdOo9wS7Mso/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "forms",
-			"title": "제20회_청소년특별회의_결과보고서",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "5.7MB",
-			"downloadUrl": "https://drive.google.com/file/d/1NbKN35xltyUPzm9BhccHS9jjXMM5Xkl2/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "forms",
-			"title": "청소년특별회의_결과보고서",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "4.3MB",
-			"downloadUrl": "https://drive.google.com/file/d/1HjHfCx07TbHM1H1DEUlXHzdn8wqabV4H/view?usp=sharing",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "forms",
-			"title": "청소년특별회의_정책리포트",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "4.1MB",
-			"downloadUrl": "https://drive.google.com/file/d/1jbbYoIUYKsWOZUga2klUrIjjuR4YR4lS/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "manuals",
-			"title": "2025년_청소년참여위원회_우수사례집 (1)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "14.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1mzyduP01iZ4JHu8drIaPBPYCUZ7hs-Ao/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "participation",
-			"category": "manuals",
-			"title": "2025년_청소년참여위원회_우수사례집",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "14.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1RIr-EG-yMh4mJO12CkRVgkPxCyJcVn7Q/view?usp=sharing",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "(기획서_양식)_2026년_청소년지도사_자격연수_기획서_양식_2급",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PPTX",
-			"fileSize": "599KB",
-			"downloadUrl": "<https://docs.google.com/presentation/d/1l8spI0RQrvDqZead3V9bkcty_xbMTDDS/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true>",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "(매뉴얼)보수교육_연기신청안내",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "3.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1wW0KlNxjVdYYzV2igyNBPQLNM-AbIEpq/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "(직무역량실습_양식)_2026년_청소년지도사_자격연수_실습양식_1급",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PPTX",
-			"fileSize": "595KB",
-			"downloadUrl": "https://docs.google.com/presentation/d/1BAET5CV7CFT-vloYGXlHYVMwhXHHe0LK/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "(활동지도안_양식)_2026년_청소년지도사_자격연수_활동지도안_양식_3급",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PPTX",
-			"fileSize": "612KB",
-			"downloadUrl": "https://docs.google.com/presentation/d/1nRSN3joU7hgVCNjzDTnsH74AFSSNPhi7/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "03_청소년기관_현장실습_제도홍보_리플릿",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "449KB",
-			"downloadUrl": "https://drive.google.com/file/d/1VzgpcPBFb5UD89bit8DeFZrpwamPl8wr/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "04_청소년기관_현장실습_제도안내_PPT",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "6.3MB",
-			"downloadUrl": "https://drive.google.com/file/d/1bS3nslud_HQTLKIvPKa6qDIQMb52Hn-v/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "forms",
-			"title": "05_청소년기관_현장실습_서식(양성기관_실습생_실습기관)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "ZIP",
-			"fileSize": "1.2MB",
-			"downloadUrl": "https://drive.google.com/file/d/1AwArKfToqrib0OAY4JA6wcOmkWrdGyuQ/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "law",
-			"title": "01_청소년기관_현장실습_운영에_관한_규정_고시_제정_알림.pdf",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "LDH",
-			"fileSize": "485KB",
-			"downloadUrl": "https://drive.google.com/file/d/1HPvj-Ay9Ebj2I50rSO66yLRf4QeXzuwJ/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "manuals",
-			"title": "02_청소년기관_현장실습_매뉴얼",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "3.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1V9PcHoxQj49MEliw06jWrzjLejZbwA-h/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "manuals",
-			"title": "붙임2_2026년_청소년지도사_보수교육_신청_및_학습매뉴얼_(ver.2026)",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "9.3MB",
-			"downloadUrl": "https://drive.google.com/file/d/1vGyf0im-aqov6dD5cs5ym3KxhSQEJXnG/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "leader",
-			"category": "manuals",
-			"title": "붙임3_청소년지도사_보수교육_대상자_관리_매뉴얼_ver.2026",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "17.8MB",
-			"downloadUrl": "https://drive.google.com/file/d/1aVVUjH34FO9bqfF8pEM8BoDTH_Uy3ybR/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "cert",
-			"category": "forms",
-			"title": "[양식] 위험도가 높은 활동 및 안전고려활동 안전체크리스트",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "ZIP",
-			"fileSize": "2.0MB",
-			"downloadUrl": "https://drive.google.com/file/d/1WuLRSmwFR4RusNgzWfVwJpO8bn7hSAzN/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "cert",
-			"category": "law",
-			"title": "[시스템] 활동장소 등록 시 건축물 분류",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "182KB",
-			"downloadUrl": "https://drive.google.com/file/d/1LsLtnV_TVkvL7GKRCMgvTg4k7e3J5DA0/view?usp=drive_link",
-			"isNew": true
-		  },
-		  {
-			"business": "cert",
-			"category": "manuals",
-			"title": "역량기반 청소년활동 인증 가이드라인 ver 1.1",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "1.6MB",
-			"downloadUrl": "https://drive.google.com/file/d/1F2jnp_ZN0wf2qJtv40VwSQCZw6mcNmBi/view?usp=drive_link",
-			"isNew": true
-		},
-		{
-			"business": "cert",
-			"category": "manuals",
-			"title": "청소년수련활동인증제 보급형프로그램 활용 가이드북_최종",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "69.6MB",
-			"downloadUrl": "https://drive.google.com/file/d/1LixOQCFW-AbGKSPbc6RpoeIdOftQBkvn/view?usp=drive_link",
-			"isNew": true
-		},
-		{
-			"business": "award",
-			"category": "law",
-			"title": "국제청소년성취포상제 자기도전포상제 운영 규정",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "2.8MB",
-			"downloadUrl": "https://drive.google.com/file/d/1tJtCO3lDb9zLgISq7utQ9FKIDmGJCf03/view?usp=drive_link",
-			"isNew": true
-		},
-		{
-			"business": "award",
-			"category": "manuals",
-			"title": "국제청소년성취포상제_포상지도자운영매뉴얼",
-			"registeredAt": "2026-08-07",
-			"audience": [
-			  "공통"
-			],
-			"keywords": [
-			  "키워드입력"
-			],
-			"description": "자료에 대한 설명을 입력해주세요.",
-			"fileType": "PDF",
-			"fileSize": "5.6MB",
-			"downloadUrl": "https://drive.google.com/file/d/1IJ9a169YNVRWpMjUNVaAMDMlhGKcEDgB/view?usp=drive_link",
-			"isNew": true
-		}
+	"resources": [
+	{
+		"business": "volunteer",
+		"category": "forms",
+		"title": "두볼 두볼 터전 관리자를 위한 안내지_최종",
+		"registeredAt": "2026-08-07",
+		"audience": ["관리자"],
+		"keywords": ["두볼", "터전관리", "안내"],
+		"description": "청소년자원봉사(Dovol) 활동터전 관리자를 위한 최종 안내 자료입니다.",
+		"fileType": "PDF",
+		"fileSize": "414KB",
+		"downloadUrl": "https://drive.google.com/file/d/1snaom5icW37R_jwoGLuf71FVWi0PK14S/view?usp=sharing",
+		"isNew": true
+	},
+	{
+	"business": "volunteer","category": "law","title": "청소년자원봉사활동 관리규정 개정본","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["자원봉사", "규정", "관리규정"],"description": "청소년 자원봉사활동 운영을 위한 최신 관리규정 개정본입니다.","fileType": "PDF","fileSize": "1.5MB","downloadUrl": "https://drive.google.com/file/d/1bOJt_uimO5OBoT85hCOasC3SEbNdEksv/view?usp=sharing","isNew": true},
+	{"business": "volunteer","category": "manuals","title": "2026년 자원봉사종합보험 업무매뉴얼.pdf","registeredAt": "2026-08-07","audience": ["관리자"],"keywords": ["자원봉사", "매뉴얼", "보험"],"description": "자원봉사 활동 중 발생할 수 있는 사고 대비를 위한 종합보험 업무 매뉴얼입니다.","fileType": "LDH","fileSize": "7.5MB","downloadUrl": "https://drive.google.com/file/d/11NrTH-IuT2EaKVDDl--d_HARaHhcoE5B/view?usp=sharing","isNew": true},
+	{"business": "volunteer","category": "manuals","title": "청소년자원봉사 Dovol 매뉴얼(지도자)","registeredAt": "2026-08-07","audience": ["지도자"],"keywords": ["두볼", "매뉴얼", "지도자"],"description": "청소년자원봉사 인증시스템(Dovol)을 활용하는 지도자용 상세 매뉴얼입니다.","fileType": "PDF","fileSize": "19.8MB","downloadUrl": "https://drive.google.com/file/d/1Cbfr3Tfv8b6RdTfv-toXV1UoY_OCztbI/view?usp=sharing","isNew": true},
+	{"business": "volunteer","category": "manuals","title": "청소년자원봉사 Dovol 매뉴얼(청소년)","registeredAt": "2026-08-07","audience": ["청소년"],"keywords": ["두볼", "매뉴얼", "청소년"],"description": "청소년이 직접 자원봉사를 검색하고 신청하기 위한 Dovol 청소년용 매뉴얼입니다.","fileType": "PDF","fileSize": "12.6MB","downloadUrl": "https://drive.google.com/file/d/13uCIvDMlJlllDplhs2a-akGWygHE6hS9/view?usp=sharing","isNew": true},
+	{"business": "report","category": "manuals","title": "청소년수련활동신고제 매뉴얼(검토기관용)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["신고제", "매뉴얼", "검토기관"],"description": "청소년수련활동 신고 사항을 심사하고 검토하는 기관 담당자를 위한 매뉴얼입니다.","fileType": "PDF","fileSize": "8.0MB","downloadUrl": "https://drive.google.com/file/d/1BE_rksRdwpOc3C_6PUiObxZGLNtXUbn3/view?usp=sharing","isNew": true},
+	{"business": "report","category": "manuals","title": "청소년수련활동신고제 매뉴얼(주최기관용)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["신고제", "매뉴얼", "주최기관"],"description": "수련활동을 개최하고 신고 절차를 진행하는 주최기관 담당자를 위한 안내서입니다.","fileType": "PDF","fileSize": "6.5MB","downloadUrl": "https://drive.google.com/file/d/168la6tCfjU8ersrrw8BNaNXx8c1hvOB6/view?usp=sharing","isNew": true},
+	{"business": "report","category": "manuals","title": "청소년수련활동신고제 매뉴얼(처리기관용)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["신고제", "매뉴얼", "처리기관"],"description": "청소년수련활동 신고 접수 및 처리를 담당하는 기관 실무자를 위한 매뉴얼입니다.","fileType": "PDF","fileSize": "9.0MB","downloadUrl": "https://drive.google.com/file/d/1XrMn6oQ7UI_4S7UmZdiK-XbTIZR0FluQ/view?usp=drive_link","isNew": true},
+	{"business": "program","category": "forms","title": "2026년도 우수 청소년활동 프로그램 지원사업 참여 안내","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["공모", "우수프로그램", "지원사업", "참여안내"],"description": "2026년 우수 청소년활동 프로그램 지원사업 공모 참여를 위한 종합 안내 자료입니다.","fileType": "PDF","fileSize": "254KB","downloadUrl": "https://drive.google.com/file/d/1bOM6n9b9QRtwZk-0pWZY71VTtQcN_R8-/view?usp=drive_link","isNew": true},
+	{"business": "program","category": "forms","title": "251103_ai 관련 우수프로그램 발굴보급 현황","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["인공지능", "우수프로그램", "사례", "현황"],"description": "AI(인공지능) 분야 우수 청소년활동 프로그램 발굴 및 보급 현황 자료입니다.","fileType": "HWP","fileSize": "100KB","downloadUrl": "https://drive.google.com/file/d/1eootL-JyR7cMG9El1KDP3cqhyHT60Esl/view?usp=drive_link","isNew": true},
+	{"business": "program","category": "forms","title": "설명자료(안전지원체계 + 우수프로그램지원사업)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["안전지원", "우수프로그램", "지원사업", "설명회"],"description": "청소년활동 안전지원체계 구축 및 우수프로그램 지원사업 설명 자료입니다.","fileType": "PPTX","fileSize": "305KB","downloadUrl": "https://docs.google.com/presentation/d/11LU-aG-bxjhoVxVVm1RQT8N3Ohfu2SR6/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true","isNew": true},
+	{"business": "program","category": "law","title": "붙임v2_2026년 우수 프로그램 지원사업_공고문 등.zip","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["공모", "우수프로그램", "공고문", "지원사업"],"description": "2026년 우수 청소년활동 프로그램 지원사업 관련 공식 공고문 및 서식 일체입니다.","fileType": "LDH","fileSize": "1.9MB","downloadUrl": "https://drive.google.com/file/d/1TAYYrMigeqY-4JIBkJKVyWR-3LbfCdG-/view?usp=drive_link","isNew": true},
+	{"business": "program","category": "manuals","title": "[매뉴얼] 2026년 우수 청소년활동 프로그램 지원사업 운영 매뉴얼","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["공모", "우수프로그램", "운영매뉴얼", "지원사업"],"description": "2026년 우수 청소년활동 프로그램 선정 기관을 위한 상세 운영 매뉴얼입니다.","fileType": "PDF","fileSize": "8.4MB","downloadUrl": "https://drive.google.com/file/d/1dmfYBSdrY0vMrS05kwZlpe9DiVaLvcSM/view?usp=drive_link","isNew": true},
+	{
+		"business": "participation",
+		"category": "forms",
+		"title": "1.[공유]청소년이_만들어가는_청소년참여활동·청소년참여포털_홍보지",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"참여활동", "청소년참여포털", "홍보지"
+		],
+		"description": "청소년이 직접 주도하는 참여활동 및 청소년참여포털 종합 홍보 리플릿입니다.",
+		"fileType": "PDF",
+		"fileSize": "1.1MB",
+		"downloadUrl": "https://drive.google.com/file/d/1C51_T0QX5Ou-E1vOmhhm4fKGPBg3TvHd/view?usp=drive_link",
+		"isNew": true
+	},
+	{
+		"business": "participation",
+		"category": "forms",
+		"title": "2.[공유]청소년이_만들어가는_청소년참여활동·청소년참여포털_홍보지(중등)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["참여활동", "중등", "참여포털", "홍보지"],"description": "중학생 눈높이에 맞춘 청소년참여활동 및 청소년참여포털 안내 홍보 자료입니다.","fileType": "PDF","fileSize": "1.9MB","downloadUrl": "https://drive.google.com/file/d/1sMl0aatDXwyD4NX_3-JxxOdOo9wS7Mso/view?usp=drive_link","isNew": true},
+	{"business": "participation","category": "forms","title": "제20회_청소년특별회의_결과보고서","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["특별회의", "청소년위원", "결과보고서"],"description": "제20회 청소년특별회의 활동 내용과 정책 제안 결과를 담은 결과보고서입니다.","fileType": "PDF","fileSize": "5.7MB","downloadUrl": "https://drive.google.com/file/d/1NbKN35xltyUPzm9BhccHS9jjXMM5Xkl2/view?usp=drive_link","isNew": true},
+	{"business": "participation","category": "forms","title": "청소년특별회의_결과보고서","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["특별회의", "결과보고서", "정책제안"],"description": "역대 청소년특별회의 운영 성과 및 주요 건의 정책을 정리한 결과보고서입니다.","fileType": "PDF","fileSize": "4.3MB","downloadUrl": "https://drive.google.com/file/d/1HjHfCx07TbHM1H1DEUlXHzdn8wqabV4H/view?usp=sharing","isNew": true},
+	{"business": "participation","category": "forms","title": "청소년특별회의_정책리포트","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["특별회의", "정책리포트", "정책제안"],"description": "청소년 위원들이 직접 발굴하고 논의한 주요 정책 과제 리포트입니다.","fileType": "PDF","fileSize": "4.1MB","downloadUrl": "https://drive.google.com/file/d/1jbbYoIUYKsWOZUga2klUrIjjuR4YR4lS/view?usp=drive_link","isNew": true},
+	{"business": "participation","category": "manuals","title": "2025년_청소년참여위원회_우수사례집 (1)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["참여위원회", "우수사레", "사례집"],"description": "2025년 전국 지역별 청소년참여위원회 우수 활동 사례를 모은 사례집입니다.","fileType": "PDF","fileSize": "14.0MB","downloadUrl": "https://drive.google.com/file/d/1mzyduP01iZ4JHu8drIaPBPYCUZ7hs-Ao/view?usp=drive_link","isNew": true},
+	{"business": "participation","category": "manuals","title": "2025년_청소년참여위원회_우수사례집","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["참여위원회", "우수사례", "활동지침"],"description": "청소년참여위원회 활성화를 위한 우수 정책 제안 및 운영 사례집입니다.","fileType": "PDF","fileSize": "14.0MB","downloadUrl": "https://drive.google.com/file/d/1RIr-EG-yMh4mJO12CkRVgkPxCyJcVn7Q/view?usp=sharing","isNew": true},
+	{"business": "leader","category": "forms","title": "(기획서_양식)_2026년_청소년지도사_자격연수_기획서_양식_2급","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["지도사", "자격연수", "2급", "기획서양식"],"description": "2026년 청소년지도사 2급 자격연수 과정에 활용하는 프로그램 기획서 양식입니다.","fileType": "PPTX","fileSize": "599KB","downloadUrl": "https://docs.google.com/presentation/d/1l8spI0RQrvDqZead3V9bkcty_xbMTDDS/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true","isNew": true},
+	{"business": "leader","category": "forms","title": "(매뉴얼)보수교육_연기신청안내","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["지도사", "보수교육", "연기신청", "매뉴얼"],"description": "청소년지도사 보수교육 일정 연기를 신청하기 위한 절차 및 안내 매뉴얼입니다.","fileType": "PDF","fileSize": "3.0MB","downloadUrl": "https://drive.google.com/file/d/1wW0KlNxjVdYYzV2igyNBPQLNM-AbIEpq/view?usp=drive_link","isNew": true},
+	{"business": "leader","category": "forms","title": "(직무역량실습_양식)_2026년_청소년지도사_자격연수_실습양식_1급","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["지도사", "자격연수", "1급", "직무역량실습"],"description": "2026년 청소년지도사 1급 자격연수 직무역량 실습에 사용하는 공식 양식입니다.","fileType": "PPTX","fileSize": "595KB","downloadUrl": "https://docs.google.com/presentation/d/1BAET5CV7CFT-vloYGXlHYVMwhXHHe0LK/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true","isNew": true},
+	{
+		"business": "leader",
+		"category": "forms",
+		"title": "(활동지도안_양식)2026년_청소년지도사_자격연수_활동지도안_양식_3급",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"지도사", "자격연수", "3급", "활동지도안"
+		],
+		"description": "2026년 청소년지도사 3급 자격연수 과정 중 작성하는 활동지도안 서식입니다.",
+		"fileType": "PPTX",
+		"fileSize": "612KB",
+		"downloadUrl": "https://docs.google.com/presentation/d/1nRSN3joU7hgVCNjzDTnsH74AFSSNPhi7/edit?usp=drive_link&ouid=108182086236154038621&rtpof=true&sd=true",
+		"isNew": true
+	},
+	{
+		"business": "leader",
+		"category": "forms",
+		"title": "03_청소년기관_현장실습_제도홍보_리플릿",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"지도사", "현장실습", "제도홍보", "리플릿"
+		],
+		"description": "청소년기관 현장실습 제도 도입 취지와 내용을 알리기 위한 홍보 리플릿입니다.",
+		"fileType": "PDF",
+		"fileSize": "449KB",
+		"downloadUrl": "https://drive.google.com/file/d/1VzgpcPBFb5UD89bit8DeFZrpwamPl8wr/view?usp=drive_link",
+		"isNew": true
+	},
+	{
+		"business": "leader",
+		"category": "forms",
+		"title": "04_청소년기관_현장실습_제도안내_PPT",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"지도사", "현장실습", "제도안내", "PPT"
+		],
+		"description": "청소년기관 현장실습 제도를 설명하고 교육하기 위한 프레젠테이션 자료입니다.",
+		"fileType": "PDF",
+		"fileSize": "6.3MB",
+		"downloadUrl": "https://drive.google.com/file/d/1bS3nslud_HQTLKIvPKa6qDIQMb52Hn-v/view?usp=drive_link",
+		"isNew": true
+	},
+	{
+		"business": "leader",
+		"category": "forms",
+		"title": "05_청소년기관_현장실습_서식(양성기관_실습생_실습기관)",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"지도사", "현장실습", "신청서식", "양성기관"
+		],
+		"description": "양성기관, 실습생, 실습기관 간 현장실습 운영에 필요한 전체 서식 모음입니다.",
+		"fileType": "ZIP",
+		"fileSize": "1.2MB",
+		"downloadUrl": "https://drive.google.com/file/d/1AwArKfToqrib0OAY4JA6wcOmkWrdGyuQ/view?usp=drive_link",
+		"isNew": true
+	},
+	{
+	"business": "leader",
+		"category": "law",
+		"title": "01_청소년기관_현장실습_운영에_관한_규정_고시_제정_알림.pdf",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"지도사", "현장실습", "운영규정", "고시"
+		],
+		"description": "청소년기관 현장실습 운영에 관한 법적 근거 및 고시 제정 알림 공문입니다.",
+		"fileType": "LDH",
+		"fileSize": "485KB",
+		"downloadUrl": "https://drive.google.com/file/d/1HPvj-Ay9Ebj2I50rSO66yLRf4QeXzuwJ/view?usp=drive_link",
+		"isNew": true
+	},
+	{
+		"business": "leader",
+		"category": "manuals",
+		"title": "02_청소년기관_현장실습_매뉴얼",
+		"registeredAt": "2026-08-07",
+		"audience": [
+		"공통"
+		],
+		"keywords": [
+		"지도사", "현장실습", "매뉴얼", "운영지침"
+		],
+		"description": "청소년기관 현장실습의 세부 운영 절차와 평가 기준을 담은 종합 매뉴얼입니다.",
+		"fileType": "PDF",
+		"fileSize": "3.0MB",
+		"downloadUrl": "https://drive.google.com/file/d/1V9PcHoxQj49MEliw06jWrzjLejZbwA-h/view?usp=drive_link",
+		"isNew": true
+	},
+	{
+		"business": "leader",
+		"category": "manuals",
+		"title": "붙임2_2026년_청소년지도사_보수교육_신청_및_학습매뉴얼(ver.2026)","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["지도사", "보수교육", "학습매뉴얼", "신청방법"],"description": "2026년 청소년지도사 보수교육 수강 신청 및 원격 학습 진행 매뉴얼입니다.","fileType": "PDF","fileSize": "9.3MB","downloadUrl": "https://drive.google.com/file/d/1vGyf0im-aqov6dD5cs5ym3KxhSQEJXnG/view?usp=drive_link","isNew": true},
+	{"business": "leader","category": "manuals","title": "붙임3_청소년지도사_보수교육_대상자_관리_매뉴얼_ver.2026","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["지도사", "보수교육", "대상자관리", "매뉴얼"],"description": "기관 담당자가 소속 청소년지도사의 보수교육 이수 현황을 관리하는 매뉴얼입니다.","fileType": "PDF","fileSize": "17.8MB","downloadUrl": "https://drive.google.com/file/d/1aVVUjH34FO9bqfF8pEM8BoDTH_Uy3ybR/view?usp=drive_link","isNew": true},
+	{"business": "cert","category": "forms","title": "[양식] 위험도가 높은 활동 및 안전고려활동 안전체크리스트","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["인증", "안전점검", "체크리스트", "위험활동"],"description": "인증 수련활동 중 고위험 활동 및 안전 고려 활동 사전 점검을 위한 체크리스트 서식입니다.","fileType": "ZIP","fileSize": "2.0MB","downloadUrl": "https://drive.google.com/file/d/1WuLRSmwFR4RusNgzWfVwJpO8bn7hSAzN/view?usp=drive_link","isNew": true},
+	{"business": "cert","category": "law","title": "[시스템] 활동장소 등록 시 건축물 분류","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["인증", "활동장소", "건축물분류", "시스템"],"description": "인증시스템에 활동 장소를 등록할 때 요구되는 건축물 용도 및 분류 기준 안내입니다.","fileType": "PDF","fileSize": "182KB","downloadUrl": "https://drive.google.com/file/d/1LsLtnV_TVkvL7GKRCMgvTg4k7e3J5DA0/view?usp=drive_link","isNew": true},
+	{"business": "cert","category": "manuals","title": "역량기반 청소년활동 인증 가이드라인 ver 1.1","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["인증", "역량기반", "가이드라인", "수련활동인증제"],"description": "역량 중심 청소년활동 인증 심사 기준 및 프로그램 설계 가이드라인입니다.","fileType": "PDF","fileSize": "1.6MB","downloadUrl": "https://drive.google.com/file/d/1F2jnp_ZN0wf2qJtv40VwSQCZw6mcNmBi/view?usp=drive_link","isNew": true},
+	{"business": "cert","category": "manuals","title": "청소년수련활동인증제 보급형프로그램 활용 가이드북_최종","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["인증", "보급형프로그램", "가이드북", "수련활동인증제"],"description": "현장에서 곧바로 활용할 수 있는 인증 보급형 프로그램 활용 종합 가이드북입니다.","fileType": "PDF","fileSize": "69.6MB","downloadUrl": "https://drive.google.com/file/d/1LixOQCFW-AbGKSPbc6RpoeIdOftQBkvn/view?usp=drive_link","isNew": true},
+	{"business": "award","category": "law","title": "국제청소년성취포상제 자기도전포상제 운영 규정","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["포상", "국제성취포상제", "자기도전포상제", "운영규정"],"description": "국제청소년성취포상제 및 청소년자기도전포상제 공식 운영 규정 및 지침입니다.","fileType": "PDF","fileSize": "2.8MB","downloadUrl": "https://drive.google.com/file/d/1tJtCO3lDb9zLgISq7utQ9FKIDmGJCf03/view?usp=drive_link","isNew": true},
+	{"business": "award","category": "manuals","title": "국제청소년성취포상제_포상지도자운영매뉴얼","registeredAt": "2026-08-07","audience": ["공통"],"keywords": ["포상", "국제성취포상제", "포상지도자", "운영매뉴얼"],"description": "포상활동 참가자를 지도하고 승인하는 포상지도자를 위한 운영 매뉴얼입니다.","fileType": "PDF","fileSize": "5.6MB","downloadUrl": "https://drive.google.com/file/d/1IJ9a169YNVRWpMjUNVaAMDMlhGKcEDgB/view?usp=drive_link","isNew": true}
 	],
 	"notices": {
 		"volunteer": [
