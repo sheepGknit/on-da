@@ -21,7 +21,7 @@ def update_notices():
     # 2. KYWA 공지사항 목록 크롤링
     url = "https://www.kywa.or.kr/pressinfo/notice_list.jsp"
     try:
-        response = requests.get(url)
+        response = requests.get(url, verify=False)
         response.encoding = 'utf-8'
         soup = BeautifulSoup(response.text, 'html.parser')
     except Exception as e:
